@@ -703,6 +703,22 @@
   z-index: -1;
 }
 
+/* Portrait image styling for Why Choose section */
+#why-choose img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+  #why-choose img {
+    max-height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .achievement-badge {
   position: absolute;
   background: white;
@@ -791,6 +807,15 @@
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   border-color: transparent;
+}
+
+.platform-tabs .nav-link i {
+  display: block;
+  color: inherit;
+}
+
+.platform-tabs .nav-link.active i {
+  color: white;
 }
 
 .platform-badge {
