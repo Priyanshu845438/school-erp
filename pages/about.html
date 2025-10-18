@@ -10,6 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -49,18 +51,152 @@
     </div>
   </nav>
 
-  <!-- Our Story Section -->
-  <section class="section">
-    <div class="container">
-      <div class="row align-items-center">
+  <!-- Hero Section -->
+  <section class="about-hero-section position-relative overflow-hidden">
+    <div class="hero-background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container py-5 position-relative">
+      <div class="row align-items-center min-vh-50">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="https://placehold.co/600x400/0D47A1/FFFFFF?text=Our+Story" alt="Our Story" class="img-fluid rounded shadow" data-testid="img-story">
+          <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 rounded-pill mb-3 border border-white" data-testid="badge-about">
+            <i class="bi bi-building me-2"></i>About Acadify Solution
+          </span>
+          <h1 class="display-3 fw-bold mb-4 text-white" data-testid="text-hero-title">
+            Transforming Education Through <span class="gradient-text-about">Innovation</span>
+          </h1>
+          <p class="lead text-white mb-4" data-testid="text-hero-subtitle">
+            We're on a mission to empower educational institutions worldwide with cutting-edge technology that makes school management effortless and efficient.
+          </p>
+          
+          <div class="d-flex gap-3 mb-4 flex-wrap">
+            <a href="#our-story" class="btn btn-light btn-lg">
+              <i class="bi bi-book me-2"></i>Our Story
+            </a>
+            <a href="#team" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-people me-2"></i>Meet the Team
+            </a>
+          </div>
         </div>
+        
         <div class="col-lg-6">
-          <h2 class="mb-4" data-testid="text-story-title">Our Story</h2>
-          <p class="lead">Founded in 2018, Acadify Solution was born from a simple yet powerful idea: to make school management effortless and efficient through technology.</p>
-          <p>We recognized that educational institutions were struggling with outdated systems, manual processes, and disconnected tools. Teachers were spending more time on administration than teaching. Parents felt disconnected from their children's education. School administrators were overwhelmed with paperwork.</p>
-          <p>Our founders, experienced educators and technology experts, came together to create a solution that would transform the way schools operate. Today, Acadify Solution serves over 500 educational institutions worldwide, helping them manage millions of student records, streamline operations, and focus on what truly matters - providing quality education.</p>
+          <div class="about-hero-visual">
+            <img src="../images/team-collaboration.jpg" alt="Acadify Team" class="img-fluid rounded-4 shadow-lg" data-testid="img-hero">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section bg-white" style="margin-top: -60px;">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card-modern" data-testid="stat-1">
+            <div class="stat-icon bg-gradient-primary">
+              <i class="bi bi-building"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number-modern">500+</h3>
+              <p class="stat-label-modern">Schools Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card-modern" data-testid="stat-2">
+            <div class="stat-icon bg-gradient-info">
+              <i class="bi bi-people"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number-modern">1M+</h3>
+              <p class="stat-label-modern">Students Managed</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card-modern" data-testid="stat-3">
+            <div class="stat-icon bg-gradient-warning">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number-modern">98%</h3>
+              <p class="stat-label-modern">Customer Satisfaction</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-card-modern" data-testid="stat-4">
+            <div class="stat-icon bg-gradient-success">
+              <i class="bi bi-headset"></i>
+            </div>
+            <div class="stat-content">
+              <h3 class="stat-number-modern">24/7</h3>
+              <p class="stat-label-modern">Support Available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="section" id="our-story">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-story">Our Journey</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-story-title">How It All Began</h2>
+        <p class="lead text-muted">From a simple idea to a global education technology leader</p>
+      </div>
+      
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2018</div>
+            <h4>The Vision</h4>
+            <p>Acadify Solution was founded with a simple yet powerful idea: to make school management effortless and efficient through technology. Our founders, experienced educators and technology experts, recognized the challenges faced by educational institutions.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2019</div>
+            <h4>First Launch</h4>
+            <p>We launched our flagship School ERP platform with 10 core modules, serving our first 50 educational institutions. Teachers could finally focus on teaching, not paperwork.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021</div>
+            <h4>Global Expansion</h4>
+            <p>Crossed 200 schools worldwide and expanded our platform to include 16 comprehensive modules covering every aspect of school operations.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023</div>
+            <h4>AI Integration</h4>
+            <p>Introduced AI-powered analytics and automation features, helping schools make data-driven decisions and streamline administrative tasks even further.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h4>Today</h4>
+            <p>Serving 500+ educational institutions worldwide, managing over 1 million student records, with a 98% customer satisfaction rate. And we're just getting started!</p>
+          </div>
         </div>
       </div>
     </div>
@@ -71,26 +207,57 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
-          <div class="card h-100 border-0 shadow" data-testid="card-mission">
-            <div class="card-body p-5">
-              <div class="icon mb-3">
-                <i class="bi bi-bullseye text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="mission-vision-card" data-testid="card-mission">
+            <div class="icon-wrapper bg-gradient-primary">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <h3 class="mb-3">Our Mission</h3>
+            <p class="lead mb-3">To empower educational institutions with innovative technology solutions that simplify administration, enhance communication, and improve the overall learning experience.</p>
+            <div class="mission-points">
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-primary"></i>
+                <span>Automate routine administrative tasks</span>
               </div>
-              <h3 class="mb-3">Our Mission</h3>
-              <p class="lead">To empower educational institutions with innovative technology solutions that simplify administration, enhance communication, and improve the overall learning experience.</p>
-              <p>We believe that by automating routine tasks and providing powerful insights, we enable educators to dedicate more time to what they do best - nurturing young minds and shaping the future.</p>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-primary"></i>
+                <span>Provide powerful data-driven insights</span>
+              </div>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-primary"></i>
+                <span>Enable educators to focus on teaching</span>
+              </div>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-primary"></i>
+                <span>Connect all education stakeholders</span>
+              </div>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-6">
-          <div class="card h-100 border-0 shadow" data-testid="card-vision">
-            <div class="card-body p-5">
-              <div class="icon mb-3">
-                <i class="bi bi-eye text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="mission-vision-card" data-testid="card-vision">
+            <div class="icon-wrapper bg-gradient-info">
+              <i class="bi bi-eye"></i>
+            </div>
+            <h3 class="mb-3">Our Vision</h3>
+            <p class="lead mb-3">To become the global leader in educational technology, transforming schools into smart, connected institutions where technology seamlessly supports education.</p>
+            <div class="mission-points">
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-secondary-custom"></i>
+                <span>Create collaborative educational ecosystems</span>
               </div>
-              <h3 class="mb-3">Our Vision</h3>
-              <p class="lead">To become the global leader in educational technology, transforming schools into smart, connected institutions where technology seamlessly supports education.</p>
-              <p>We envision a future where every student, teacher, parent, and administrator is connected through our platform, creating a collaborative educational ecosystem that drives excellence and innovation.</p>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-secondary-custom"></i>
+                <span>Drive excellence through innovation</span>
+              </div>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-secondary-custom"></i>
+                <span>Build the future of education technology</span>
+              </div>
+              <div class="point-item">
+                <i class="bi bi-check-circle-fill text-secondary-custom"></i>
+                <span>Make quality education accessible to all</span>
+              </div>
             </div>
           </div>
         </div>
@@ -99,42 +266,92 @@
   </section>
 
   <!-- Meet the Team -->
-  <section class="section">
+  <section class="section" id="team">
     <div class="container">
-      <h2 class="section-title" data-testid="text-team-title">Meet Our Leadership Team</h2>
-      <p class="section-subtitle" data-testid="text-team-subtitle">Passionate professionals dedicated to transforming education</p>
+      <div class="text-center mb-5">
+        <span class="badge bg-secondary-custom bg-opacity-10 text-secondary-custom px-3 py-2 rounded-pill mb-3" data-testid="badge-team">Our Team</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-team-title">Meet Our Leadership</h2>
+        <p class="lead text-muted" data-testid="text-team-subtitle">Passionate professionals dedicated to transforming education</p>
+      </div>
       
       <div class="row g-4">
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-team-1">
-            <img src="https://placehold.co/200x200/0D47A1/FFFFFF?text=SJ" alt="Sarah Johnson" class="rounded-circle mb-3" data-testid="img-team-1">
-            <h5>Sarah Johnson</h5>
-            <p class="text-secondary-custom mb-2">CEO & Co-Founder</p>
-            <p class="text-muted small">Former school principal with 15 years in education, passionate about ed-tech innovation.</p>
+          <div class="team-card-modern" data-testid="card-team-1">
+            <div class="team-image-wrapper">
+              <img src="../images/team-ceo.jpg" alt="Sarah Johnson" class="team-image" data-testid="img-team-1">
+              <div class="team-overlay">
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Sarah Johnson</h5>
+              <p class="text-secondary-custom fw-bold mb-2">CEO & Co-Founder</p>
+              <p class="text-muted small">Former school principal with 15 years in education, passionate about ed-tech innovation and transforming learning experiences.</p>
+            </div>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-team-2">
-            <img src="https://placehold.co/200x200/00ACC1/FFFFFF?text=MP" alt="Michael Patel" class="rounded-circle mb-3" data-testid="img-team-2">
-            <h5>Michael Patel</h5>
-            <p class="text-secondary-custom mb-2">CTO & Co-Founder</p>
-            <p class="text-muted small">Technology veteran with 20 years in software development and system architecture.</p>
+          <div class="team-card-modern" data-testid="card-team-2">
+            <div class="team-image-wrapper">
+              <img src="../images/team-cto.jpg" alt="Michael Patel" class="team-image" data-testid="img-team-2">
+              <div class="team-overlay">
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Michael Patel</h5>
+              <p class="text-secondary-custom fw-bold mb-2">CTO & Co-Founder</p>
+              <p class="text-muted small">Technology veteran with 20 years in software development, system architecture, and building scalable platforms.</p>
+            </div>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-team-3">
-            <img src="https://placehold.co/200x200/0D47A1/FFFFFF?text=EC" alt="Emily Chen" class="rounded-circle mb-3" data-testid="img-team-3">
-            <h5>Emily Chen</h5>
-            <p class="text-secondary-custom mb-2">Head of Product</p>
-            <p class="text-muted small">UX expert dedicated to creating intuitive, user-friendly educational software.</p>
+          <div class="team-card-modern" data-testid="card-team-3">
+            <div class="team-image-wrapper">
+              <img src="../images/team-product.jpg" alt="Emily Chen" class="team-image" data-testid="img-team-3">
+              <div class="team-overlay">
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>Emily Chen</h5>
+              <p class="text-secondary-custom fw-bold mb-2">Head of Product</p>
+              <p class="text-muted small">UX expert dedicated to creating intuitive, user-friendly educational software that delights users.</p>
+            </div>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-team-4">
-            <img src="https://placehold.co/200x200/00ACC1/FFFFFF?text=DM" alt="David Martinez" class="rounded-circle mb-3" data-testid="img-team-4">
-            <h5>David Martinez</h5>
-            <p class="text-secondary-custom mb-2">Head of Customer Success</p>
-            <p class="text-muted small">Committed to ensuring every school achieves maximum value from our platform.</p>
+          <div class="team-card-modern" data-testid="card-team-4">
+            <div class="team-image-wrapper">
+              <img src="../images/team-customer.jpg" alt="David Martinez" class="team-image" data-testid="img-team-4">
+              <div class="team-overlay">
+                <div class="social-links">
+                  <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="social-link"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-info">
+              <h5>David Martinez</h5>
+              <p class="text-secondary-custom fw-bold mb-2">Head of Customer Success</p>
+              <p class="text-muted small">Committed to ensuring every school achieves maximum value from our platform and exceeds their goals.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -144,76 +361,50 @@
   <!-- Our Values -->
   <section class="section bg-light-custom">
     <div class="container">
-      <h2 class="section-title" data-testid="text-values-title">Our Core Values</h2>
-      <p class="section-subtitle" data-testid="text-values-subtitle">The principles that guide everything we do</p>
+      <div class="text-center mb-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-values">Core Values</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-values-title">What We Stand For</h2>
+        <p class="lead text-muted" data-testid="text-values-subtitle">The principles that guide everything we do</p>
+      </div>
       
-      <div class="row g-4 mt-4">
+      <div class="row g-4">
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-value-1">
-            <div class="icon mb-3">
-              <i class="bi bi-lightbulb text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="value-card-modern" data-testid="card-value-1">
+            <div class="value-icon bg-gradient-warning">
+              <i class="bi bi-lightbulb"></i>
             </div>
             <h4>Innovation</h4>
-            <p>We continuously evolve our platform with cutting-edge technology to stay ahead of educational needs.</p>
+            <p>We continuously evolve our platform with cutting-edge technology to stay ahead of educational needs and industry trends.</p>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-value-2">
-            <div class="icon mb-3">
-              <i class="bi bi-shield-check text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="value-card-modern" data-testid="card-value-2">
+            <div class="value-icon bg-gradient-success">
+              <i class="bi bi-shield-check"></i>
             </div>
             <h4>Integrity</h4>
-            <p>We operate with transparency, honesty, and the highest ethical standards in all our dealings.</p>
+            <p>We operate with transparency, honesty, and the highest ethical standards in all our dealings and relationships.</p>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-value-3">
-            <div class="icon mb-3">
-              <i class="bi bi-heart text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="value-card-modern" data-testid="card-value-3">
+            <div class="value-icon bg-gradient-danger">
+              <i class="bi bi-heart"></i>
             </div>
             <h4>Customer Success</h4>
-            <p>Your success is our success. We're committed to delivering exceptional value and support.</p>
+            <p>Your success is our success. We're committed to delivering exceptional value, support, and measurable results.</p>
           </div>
         </div>
+        
         <div class="col-lg-3 col-md-6">
-          <div class="text-center" data-testid="card-value-4">
-            <div class="icon mb-3">
-              <i class="bi bi-people text-secondary-custom" style="font-size: 3rem;"></i>
+          <div class="value-card-modern" data-testid="card-value-4">
+            <div class="value-icon bg-gradient-info">
+              <i class="bi bi-people"></i>
             </div>
             <h4>Collaboration</h4>
-            <p>We believe in the power of teamwork and partnership to achieve extraordinary results.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section class="section">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="stat-item" data-testid="stat-1">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Schools Worldwide</span>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="stat-item" data-testid="stat-2">
-            <span class="stat-number">1M+</span>
-            <span class="stat-label">Students Managed</span>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="stat-item" data-testid="stat-3">
-            <span class="stat-number">98%</span>
-            <span class="stat-label">Customer Satisfaction</span>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="stat-item" data-testid="stat-4">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Support Available</span>
+            <p>We believe in the power of teamwork and partnership to achieve extraordinary results for education.</p>
           </div>
         </div>
       </div>
@@ -223,10 +414,20 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-testid="text-cta-title">Join Our Journey</h2>
-      <p class="lead" data-testid="text-cta-subtitle">Be part of the educational revolution. Transform your school with Acadify Solution today.</p>
-      <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">Request a Demo</a>
-      <a href="contact.html" class="btn btn-outline-light btn-lg" data-testid="button-cta-contact">Get in Touch</a>
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+          <h2 data-testid="text-cta-title">Join Our Journey</h2>
+          <p class="lead mb-0" data-testid="text-cta-subtitle">Be part of the educational revolution. Transform your school with Acadify Solution today.</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="demo.html" class="btn btn-light btn-lg me-2 mb-2" data-testid="button-cta-demo">
+            <i class="bi bi-rocket-takeoff me-2"></i>Request a Demo
+          </a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg mb-2" data-testid="button-cta-contact">
+            Get in Touch
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
