@@ -10,6 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -50,92 +52,190 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section py-5">
-    <div class="container text-center">
-      <h1 data-testid="text-hero-title">Simple, Transparent Pricing for Every School Size</h1>
-      <p class="lead" data-testid="text-hero-subtitle">Choose the plan that best fits your institution's needs</p>
+  <section class="pricing-hero-section position-relative overflow-hidden">
+    <div class="hero-background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container py-5 position-relative text-center">
+      <span class="badge bg-white bg-opacity-20 text-white px-3 py-2 rounded-pill mb-3 border border-white" data-testid="badge-pricing">
+        <i class="bi bi-tag me-2"></i>Flexible Pricing Plans
+      </span>
+      <h1 class="display-3 fw-bold mb-4 text-white" data-testid="text-hero-title">
+        Simple, Transparent <span class="gradient-text-pricing">Pricing</span>
+      </h1>
+      <p class="lead text-white mb-4" data-testid="text-hero-subtitle">
+        Choose the plan that best fits your institution's needs. No hidden fees, no surprises.
+      </p>
       
       <!-- Billing Toggle -->
-      <div class="form-check form-switch d-inline-block mt-4">
-        <input class="form-check-input" type="checkbox" id="pricingToggle" data-testid="toggle-billing">
-        <label class="form-check-label ms-2" for="pricingToggle">
-          <span class="me-2">Monthly</span> | <span class="ms-2 fw-bold">Annually (Save 20%)</span>
-        </label>
+      <div class="pricing-toggle-wrapper">
+        <div class="pricing-toggle">
+          <button class="toggle-btn active" id="monthlyBtn" data-testid="button-monthly">
+            Monthly
+          </button>
+          <button class="toggle-btn" id="annualBtn" data-testid="button-annual">
+            Annual
+            <span class="save-badge">Save 20%</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Trust Indicators -->
+      <div class="row g-3 mt-5 justify-content-center">
+        <div class="col-md-3 col-6">
+          <div class="trust-indicator">
+            <i class="bi bi-shield-check text-white"></i>
+            <div class="text-white fw-bold">14-Day Free Trial</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-indicator">
+            <i class="bi bi-x-circle text-white"></i>
+            <div class="text-white fw-bold">No Credit Card</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-indicator">
+            <i class="bi bi-arrow-clockwise text-white"></i>
+            <div class="text-white fw-bold">Cancel Anytime</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-indicator">
+            <i class="bi bi-headset text-white"></i>
+            <div class="text-white fw-bold">24/7 Support</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing Cards -->
-  <section class="section">
+  <section class="section pb-5">
     <div class="container">
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center" style="margin-top: -80px;">
         <!-- Starter Plan -->
         <div class="col-lg-4 col-md-6">
-          <div class="pricing-card" data-testid="card-pricing-starter">
-            <h3>Starter</h3>
-            <p class="text-muted">Perfect for small schools</p>
-            <div class="price">
-              <span class="price-amount" data-monthly="$299" data-annual="$2,870">$299</span>
-              <small>/month</small>
+          <div class="pricing-card-modern" data-testid="card-pricing-starter">
+            <div class="pricing-card-header">
+              <div class="plan-icon bg-gradient-info">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <h3 class="plan-name">Starter</h3>
+              <p class="plan-description">Perfect for small schools</p>
             </div>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Up to 200 students</li>
-              <li><i class="bi bi-check-circle-fill"></i> 10 core modules</li>
-              <li><i class="bi bi-check-circle-fill"></i> Mobile app access</li>
-              <li><i class="bi bi-check-circle-fill"></i> Email support</li>
-              <li><i class="bi bi-check-circle-fill"></i> Basic reporting</li>
-              <li><i class="bi bi-check-circle-fill"></i> Cloud storage (10GB)</li>
+            
+            <div class="pricing-amount">
+              <span class="currency">$</span>
+              <span class="price monthly-price">299</span>
+              <span class="price annual-price" style="display: none;">240</span>
+              <span class="period">/month</span>
+            </div>
+            <div class="annual-savings" style="display: none;">
+              <span class="badge bg-success">Save $708 annually</span>
+            </div>
+            
+            <ul class="features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Up to <strong>200 students</strong></span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span><strong>10 core modules</strong></span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Mobile app access</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Email support</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Basic reporting</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Cloud storage (10GB)</span></li>
             </ul>
-            <a href="demo.html" class="btn btn-outline-primary w-100" data-testid="button-plan-starter">Choose Starter</a>
+            
+            <a href="demo.html" class="btn btn-outline-primary w-100 btn-lg" data-testid="button-plan-starter">
+              Start Free Trial
+            </a>
           </div>
         </div>
 
         <!-- Professional Plan (Featured) -->
         <div class="col-lg-4 col-md-6">
-          <div class="pricing-card featured" data-testid="card-pricing-professional">
-            <span class="badge">Most Popular</span>
-            <h3>Professional</h3>
-            <p class="text-muted">For growing institutions</p>
-            <div class="price">
-              <span class="price-amount" data-monthly="$599" data-annual="$5,750">$599</span>
-              <small>/month</small>
+          <div class="pricing-card-modern featured-plan" data-testid="card-pricing-professional">
+            <div class="popular-badge">
+              <i class="bi bi-star-fill me-1"></i> Most Popular
             </div>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Up to 1000 students</li>
-              <li><i class="bi bi-check-circle-fill"></i> All 16 modules</li>
-              <li><i class="bi bi-check-circle-fill"></i> Mobile app + Web portals</li>
-              <li><i class="bi bi-check-circle-fill"></i> Priority phone & email support</li>
-              <li><i class="bi bi-check-circle-fill"></i> Advanced reporting & analytics</li>
-              <li><i class="bi bi-check-circle-fill"></i> Cloud storage (50GB)</li>
-              <li><i class="bi bi-check-circle-fill"></i> Custom branding</li>
-              <li><i class="bi bi-check-circle-fill"></i> API access</li>
+            
+            <div class="pricing-card-header">
+              <div class="plan-icon bg-gradient-primary">
+                <i class="bi bi-building"></i>
+              </div>
+              <h3 class="plan-name">Professional</h3>
+              <p class="plan-description">For growing institutions</p>
+            </div>
+            
+            <div class="pricing-amount">
+              <span class="currency">$</span>
+              <span class="price monthly-price">599</span>
+              <span class="price annual-price" style="display: none;">479</span>
+              <span class="period">/month</span>
+            </div>
+            <div class="annual-savings" style="display: none;">
+              <span class="badge bg-success">Save $1,440 annually</span>
+            </div>
+            
+            <ul class="features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Up to <strong>1000 students</strong></span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span><strong>All 16 modules</strong></span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Mobile app + Web portals</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Priority phone & email support</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Advanced reporting & analytics</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Cloud storage (50GB)</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Custom branding</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>API access</span></li>
             </ul>
-            <a href="demo.html" class="btn btn-primary w-100" data-testid="button-plan-professional">Choose Professional</a>
+            
+            <a href="demo.html" class="btn btn-primary w-100 btn-lg" data-testid="button-plan-professional">
+              Start Free Trial
+            </a>
           </div>
         </div>
 
         <!-- Enterprise Plan -->
         <div class="col-lg-4 col-md-6">
-          <div class="pricing-card" data-testid="card-pricing-enterprise">
-            <h3>Enterprise</h3>
-            <p class="text-muted">For large institutions</p>
-            <div class="price">
-              <span class="text-secondary-custom">Contact Us</span>
+          <div class="pricing-card-modern" data-testid="card-pricing-enterprise">
+            <div class="pricing-card-header">
+              <div class="plan-icon bg-gradient-warning">
+                <i class="bi bi-stars"></i>
+              </div>
+              <h3 class="plan-name">Enterprise</h3>
+              <p class="plan-description">For large institutions</p>
             </div>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Unlimited students</li>
-              <li><i class="bi bi-check-circle-fill"></i> All modules + custom features</li>
-              <li><i class="bi bi-check-circle-fill"></i> White-label mobile apps</li>
-              <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager</li>
-              <li><i class="bi bi-check-circle-fill"></i> 24/7 priority support</li>
-              <li><i class="bi bi-check-circle-fill"></i> Unlimited cloud storage</li>
-              <li><i class="bi bi-check-circle-fill"></i> Multi-branch management</li>
-              <li><i class="bi bi-check-circle-fill"></i> On-premise deployment option</li>
-              <li><i class="bi bi-check-circle-fill"></i> Custom integrations</li>
-              <li><i class="bi bi-check-circle-fill"></i> Training & onboarding</li>
+            
+            <div class="pricing-amount">
+              <span class="custom-pricing">Custom Pricing</span>
+              <p class="small text-muted mt-2">Tailored to your needs</p>
+            </div>
+            
+            <ul class="features-list">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span><strong>Unlimited students</strong></span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>All modules + custom features</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>White-label mobile apps</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Dedicated account manager</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>24/7 priority support</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Unlimited cloud storage</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Multi-branch management</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>On-premise deployment option</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Custom integrations</span></li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <span>Training & onboarding</span></li>
             </ul>
-            <a href="contact.html" class="btn btn-outline-primary w-100" data-testid="button-plan-enterprise">Contact Sales</a>
+            
+            <a href="contact.html" class="btn btn-outline-primary w-100 btn-lg" data-testid="button-plan-enterprise">
+              Contact Sales
+            </a>
           </div>
+        </div>
+      </div>
+      
+      <!-- Money Back Guarantee -->
+      <div class="text-center mt-5">
+        <div class="guarantee-badge">
+          <i class="bi bi-shield-check text-success"></i>
+          <strong>30-Day Money-Back Guarantee</strong> - Try risk-free
         </div>
       </div>
     </div>
@@ -144,119 +244,145 @@
   <!-- Feature Comparison Table -->
   <section class="section bg-light-custom">
     <div class="container">
-      <h2 class="section-title" data-testid="text-comparison-title">Detailed Feature Comparison</h2>
-      <div class="table-responsive mt-5">
-        <table class="table comparison-table">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-comparison">Detailed Comparison</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-comparison-title">Compare All Features</h2>
+        <p class="lead text-muted">See exactly what's included in each plan</p>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="table comparison-table-modern">
           <thead>
             <tr>
-              <th>Features</th>
-              <th>Starter</th>
-              <th>Professional</th>
-              <th>Enterprise</th>
+              <th class="feature-column">Features</th>
+              <th class="text-center">Starter</th>
+              <th class="text-center featured-column">Professional</th>
+              <th class="text-center">Enterprise</th>
             </tr>
           </thead>
           <tbody>
+            <tr class="category-row">
+              <td colspan="4"><strong>Core Features</strong></td>
+            </tr>
             <tr>
               <td>Student Capacity</td>
-              <td>Up to 200</td>
-              <td>Up to 1000</td>
-              <td>Unlimited</td>
+              <td class="text-center">Up to 200</td>
+              <td class="text-center">Up to 1000</td>
+              <td class="text-center"><strong>Unlimited</strong></td>
             </tr>
             <tr>
               <td>Admission Management</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Student & Staff Management</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Fee Collection & Management</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Attendance Tracking</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Examination Management</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Timetable Management</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Parent & Student Portal</td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+            </tr>
+            
+            <tr class="category-row">
+              <td colspan="4"><strong>Advanced Modules</strong></td>
             </tr>
             <tr>
               <td>Library Management</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Transport Management</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>Hostel Management</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>HR & Payroll</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
-            <tr>
-              <td>Mobile Applications</td>
-              <td>Standard</td>
-              <td>Full Access</td>
-              <td>White-Label</td>
+            
+            <tr class="category-row">
+              <td colspan="4"><strong>Customization & Integration</strong></td>
             </tr>
             <tr>
               <td>Custom Branding</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td>API Access</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+            </tr>
+            <tr>
+              <td>Mobile Applications</td>
+              <td class="text-center">Standard</td>
+              <td class="text-center">Full Access</td>
+              <td class="text-center"><strong>White-Label</strong></td>
             </tr>
             <tr>
               <td>Multi-Branch Support</td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-x-circle-fill text-danger fs-5"></i></td>
+              <td class="text-center"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+            </tr>
+            
+            <tr class="category-row">
+              <td colspan="4"><strong>Support & Training</strong></td>
             </tr>
             <tr>
-              <td>Support</td>
-              <td>Email</td>
-              <td>Priority Phone & Email</td>
-              <td>24/7 Dedicated Support</td>
+              <td>Support Level</td>
+              <td class="text-center">Email</td>
+              <td class="text-center"><strong>Priority Phone & Email</strong></td>
+              <td class="text-center"><strong>24/7 Dedicated Support</strong></td>
+            </tr>
+            <tr>
+              <td>Onboarding & Training</td>
+              <td class="text-center">Self-service</td>
+              <td class="text-center">Guided Setup</td>
+              <td class="text-center"><strong>Full Onboarding</strong></td>
             </tr>
           </tbody>
         </table>
@@ -267,69 +393,97 @@
   <!-- FAQ Section -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title" data-testid="text-faq-title">Pricing FAQs</h2>
-      <div class="accordion mt-5" id="pricingFAQ">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" data-testid="button-faq-1">
-              Is there a setup fee?
-            </button>
-          </h2>
-          <div id="faq1" class="accordion-collapse collapse show" data-parent="#pricingFAQ">
-            <div class="accordion-body">
-              No, there are no hidden setup fees. The pricing shown includes complete setup, data migration assistance, and initial training for your team.
+      <div class="text-center mb-5">
+        <span class="badge bg-secondary-custom bg-opacity-10 text-secondary-custom px-3 py-2 rounded-pill mb-3" data-testid="badge-faq">Pricing FAQs</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-faq-title">Frequently Asked Questions</h2>
+        <p class="lead text-muted">Got questions? We've got answers.</p>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="accordion accordion-flush modern-accordion" id="pricingFAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" data-testid="button-faq-1">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  Is there a setup fee?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  <strong>No hidden fees whatsoever.</strong> The pricing shown includes complete setup, data migration assistance, and initial training for your team. We believe in transparent pricing with no surprises.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" data-testid="button-faq-2">
-              Can I change my plan later?
-            </button>
-          </h2>
-          <div id="faq2" class="accordion-collapse collapse" data-parent="#pricingFAQ">
-            <div class="accordion-body">
-              Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference. Downgrades take effect at the next billing cycle.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" data-testid="button-faq-2">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  Can I change my plan later?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference immediately. Downgrades take effect at the next billing cycle, and we'll credit any unused amount.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" data-testid="button-faq-3">
-              What payment methods do you accept?
-            </button>
-          </h2>
-          <div id="faq3" class="accordion-collapse collapse" data-parent="#pricingFAQ">
-            <div class="accordion-body">
-              We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. Annual subscriptions can be paid via invoice.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" data-testid="button-faq-3">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  We accept all major credit cards (Visa, MasterCard, American Express), bank transfers, and can arrange custom payment terms for enterprise clients. Annual subscriptions can be paid via invoice with NET 30 terms.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" data-testid="button-faq-4">
-              Is there a free trial available?
-            </button>
-          </h2>
-          <div id="faq4" class="accordion-collapse collapse" data-parent="#pricingFAQ">
-            <div class="accordion-body">
-              Yes, we offer a 14-day free trial with full access to all features. No credit card required to start your trial. Schedule a demo to get started.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" data-testid="button-faq-4">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  Is there a free trial available?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  <strong>Yes! We offer a 14-day free trial</strong> with full access to all features in the Professional plan. No credit card required to start your trial. You can schedule a personalized demo or sign up directly to get started.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" data-testid="button-faq-5">
-              What happens if I exceed my student limit?
-            </button>
-          </h2>
-          <div id="faq5" class="accordion-collapse collapse" data-parent="#pricingFAQ">
-            <div class="accordion-body">
-              We'll notify you when you approach your limit. You can either upgrade to the next plan or pay a small per-student fee for additional capacity within your current plan.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" data-testid="button-faq-5">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  What happens if I exceed my student limit?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  We'll notify you when you approach 80% of your limit. You can either upgrade to the next plan seamlessly, or pay a small per-student fee ($2/student/month) for additional capacity within your current plan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" data-testid="button-faq-6">
+                  <i class="bi bi-question-circle me-3 text-primary"></i>
+                  Do you offer discounts for non-profit schools?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+                <div class="accordion-body">
+                  Yes! We offer special pricing for registered non-profit educational institutions and NGOs. Contact our sales team with your non-profit documentation to learn about available discounts (typically 15-25% off).
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -340,10 +494,20 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-testid="text-cta-title">Ready to Get Started?</h2>
-      <p class="lead" data-testid="text-cta-subtitle">Start your free 14-day trial today - no credit card required</p>
-      <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">Start Free Trial</a>
-      <a href="contact.html" class="btn btn-outline-light btn-lg" data-testid="button-cta-contact">Contact Sales</a>
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+          <h2 data-testid="text-cta-title">Ready to Get Started?</h2>
+          <p class="lead mb-0" data-testid="text-cta-subtitle">Start your free 14-day trial today - no credit card required</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="demo.html" class="btn btn-light btn-lg me-2 mb-2" data-testid="button-cta-demo">
+            <i class="bi bi-rocket-takeoff me-2"></i>Start Free Trial
+          </a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg mb-2" data-testid="button-cta-contact">
+            Contact Sales
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -408,5 +572,34 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="../js/script.js"></script>
+  
+  <!-- Pricing Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const monthlyBtn = document.getElementById('monthlyBtn');
+      const annualBtn = document.getElementById('annualBtn');
+      const monthlyPrices = document.querySelectorAll('.monthly-price');
+      const annualPrices = document.querySelectorAll('.annual-price');
+      const annualSavings = document.querySelectorAll('.annual-savings');
+      
+      monthlyBtn.addEventListener('click', function() {
+        monthlyBtn.classList.add('active');
+        annualBtn.classList.remove('active');
+        
+        monthlyPrices.forEach(el => el.style.display = 'inline');
+        annualPrices.forEach(el => el.style.display = 'none');
+        annualSavings.forEach(el => el.style.display = 'none');
+      });
+      
+      annualBtn.addEventListener('click', function() {
+        annualBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
+        
+        monthlyPrices.forEach(el => el.style.display = 'none');
+        annualPrices.forEach(el => el.style.display = 'inline');
+        annualSavings.forEach(el => el.style.display = 'block');
+      });
+    });
+  </script>
 </body>
 </html>

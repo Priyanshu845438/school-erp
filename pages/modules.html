@@ -10,6 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -50,255 +52,503 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section py-5">
-    <div class="container text-center">
-      <h1 data-testid="text-hero-title">Powerful Modules for Every School Need</h1>
-      <p class="lead" data-testid="text-hero-subtitle">Comprehensive solutions designed to manage every aspect of your educational institution</p>
+  <section class="modules-hero-section position-relative overflow-hidden">
+    <div class="hero-background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container py-5 position-relative">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <span class="badge bg-secondary-custom bg-opacity-10 text-secondary-custom px-3 py-2 rounded-pill mb-3" data-testid="badge-modules">
+            <i class="bi bi-grid-3x3-gap me-2"></i>16+ Powerful Modules
+          </span>
+          <h1 class="display-3 fw-bold mb-4" data-testid="text-hero-title">
+            Complete ERP <span class="gradient-text">Solutions</span> for Your School
+          </h1>
+          <p class="lead text-muted mb-4" data-testid="text-hero-subtitle">
+            From admissions to alumni management, our comprehensive modules cover every aspect of school operations. Streamline your workflow with our integrated platform.
+          </p>
+          
+          <div class="d-flex gap-3 mb-4 flex-wrap">
+            <a href="#modules-grid" class="btn btn-primary btn-lg" data-testid="button-explore">
+              <i class="bi bi-arrow-down-circle me-2"></i>Explore Modules
+            </a>
+            <a href="demo.html" class="btn btn-outline-primary btn-lg" data-testid="button-demo-hero">
+              <i class="bi bi-play-circle me-2"></i>Watch Demo
+            </a>
+          </div>
+          
+          <!-- Quick Stats -->
+          <div class="row g-3 mt-4">
+            <div class="col-4">
+              <div class="stat-box">
+                <h3 class="fw-bold text-primary mb-0">16+</h3>
+                <p class="small text-muted mb-0">Modules</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <h3 class="fw-bold text-secondary-custom mb-0">100%</h3>
+                <p class="small text-muted mb-0">Customizable</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <h3 class="fw-bold text-primary mb-0">24/7</h3>
+                <p class="small text-muted mb-0">Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="modules-hero-visual">
+            <img src="../images/admin-dashboard.jpg" alt="Acadify Modules Dashboard" class="img-fluid rounded-4 shadow-lg" data-testid="img-hero">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Modules Grid -->
+  <!-- Category Filter -->
+  <section class="section bg-light-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-categories">Browse by Category</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-categories-title">Choose Your Module Category</h2>
+        <p class="lead text-muted" data-testid="text-categories-subtitle">Filter modules by category to find exactly what you need</p>
+      </div>
+      
+      <ul class="nav nav-pills justify-content-center mb-5 module-category-tabs flex-wrap" id="categoryTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" data-testid="button-filter-all">
+            <i class="bi bi-grid-3x3-gap me-2"></i>All Modules
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="academic-tab" data-bs-toggle="pill" data-bs-target="#academic" type="button" role="tab" data-testid="button-filter-academic">
+            <i class="bi bi-book me-2"></i>Academic
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="admin-tab" data-bs-toggle="pill" data-bs-target="#admin" type="button" role="tab" data-testid="button-filter-admin">
+            <i class="bi bi-speedometer2 me-2"></i>Administration
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="finance-tab" data-bs-toggle="pill" data-bs-target="#finance" type="button" role="tab" data-testid="button-filter-finance">
+            <i class="bi bi-currency-dollar me-2"></i>Finance
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="communication-tab" data-bs-toggle="pill" data-bs-target="#communication" type="button" role="tab" data-testid="button-filter-communication">
+            <i class="bi bi-chat-dots me-2"></i>Communication
+          </button>
+        </li>
+      </ul>
+      
+      <div class="tab-content" id="categoryTabsContent">
+        <!-- All Modules Tab -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel">
+          <div id="modules-grid" class="row g-4">
+            <!-- Academic Modules -->
+            <div class="col-12">
+              <h4 class="fw-bold text-primary mb-4" data-testid="text-section-academic">
+                <i class="bi bi-book me-2"></i>Academic Management
+              </h4>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-admission">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-primary">
+                    <i class="bi bi-person-plus-fill"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Admission Management</h4>
+                  <p>Streamline admissions from enquiry to enrollment with online forms and automated workflows.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Online Application Forms</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Document Management</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Automated Communication</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-student">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-secondary">
+                    <i class="bi bi-person-badge"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Student Information System</h4>
+                  <p>Comprehensive profiles with complete academic records and family details management.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Complete Student Profiles</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Academic History Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Medical Records</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-exam">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-primary">
+                    <i class="bi bi-clipboard-data"></i>
+                  </div>
+                  <span class="module-badge">Popular</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Examination & Results</h4>
+                  <p>Complete exam management with online tests, grading, and analytics.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Online Assessments</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Automated Grading</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Report Card Generation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-timetable">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-secondary">
+                    <i class="bi bi-calendar2-week"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Timetable Management</h4>
+                  <p>Intelligent scheduling with conflict detection and instant updates.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Auto Conflict Detection</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Teacher Substitution</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Period Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-attendance">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-primary">
+                    <i class="bi bi-calendar-check"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Smart Attendance</h4>
+                  <p>Digital attendance with biometric integration and real-time notifications.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Biometric Integration</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Real-time Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Automated Alerts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="academic" data-testid="card-module-library">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-secondary">
+                    <i class="bi bi-book"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Library Management</h4>
+                  <p>Digital library with cataloging, tracking, and online search capabilities.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Barcode Scanning</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Issue-Return Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Fine Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Administration Modules -->
+            <div class="col-12 mt-5">
+              <h4 class="fw-bold text-primary mb-4" data-testid="text-section-admin">
+                <i class="bi bi-speedometer2 me-2"></i>Administration & Operations
+              </h4>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="admin" data-testid="card-module-hr">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-warning">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>HR & Payroll</h4>
+                  <p>Complete HR solution with staff management and automated payroll.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Staff Management</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Leave Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Payroll Processing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="admin" data-testid="card-module-transport">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-info">
+                    <i class="bi bi-bus-front"></i>
+                  </div>
+                  <span class="module-badge">Popular</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Transport Management</h4>
+                  <p>Complete transport solution with GPS tracking and route optimization.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> GPS Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Route Planning</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Driver Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="admin" data-testid="card-module-hostel">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-success">
+                    <i class="bi bi-building"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Hostel Management</h4>
+                  <p>Comprehensive hostel management with room allocation and meal planning.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Room Allocation</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Attendance Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Meal Management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="admin" data-testid="card-module-inventory">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-danger">
+                    <i class="bi bi-box-seam"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Inventory Management</h4>
+                  <p>Track and manage school assets, supplies, and equipment efficiently.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Asset Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Stock Alerts</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Purchase Orders</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Finance Modules -->
+            <div class="col-12 mt-5">
+              <h4 class="fw-bold text-primary mb-4" data-testid="text-section-finance">
+                <i class="bi bi-currency-dollar me-2"></i>Finance & Accounting
+              </h4>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="finance" data-testid="card-module-fee">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-success">
+                    <i class="bi bi-credit-card"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Fee Management</h4>
+                  <p>Automated fee collection with online payments and financial reporting.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Online Payments</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Installment Plans</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Auto Receipts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="finance" data-testid="card-module-accounts">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-primary">
+                    <i class="bi bi-calculator"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Accounting & Finance</h4>
+                  <p>Complete accounting with ledger management and financial reporting.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Ledger Management</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Income-Expense Tracking</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Financial Reports</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Communication Modules -->
+            <div class="col-12 mt-5">
+              <h4 class="fw-bold text-primary mb-4" data-testid="text-section-communication">
+                <i class="bi bi-chat-dots me-2"></i>Communication & Engagement
+              </h4>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="communication" data-testid="card-module-communication">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-info">
+                    <i class="bi bi-chat-dots"></i>
+                  </div>
+                  <span class="module-badge">Core</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Communication Hub</h4>
+                  <p>Unified platform with SMS, email, and push notifications system.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> SMS & Email</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Push Notifications</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Announcements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="communication" data-testid="card-module-parent">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-secondary">
+                    <i class="bi bi-person-heart"></i>
+                  </div>
+                  <span class="module-badge">Popular</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Parent Portal</h4>
+                  <p>Interactive portal for real-time access to child's progress and communication.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Real-time Updates</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Grade Access</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Direct Messaging</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="communication" data-testid="card-module-student-portal">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-primary">
+                    <i class="bi bi-mortarboard-fill"></i>
+                  </div>
+                </div>
+                <div class="module-card-body">
+                  <h4>Student Portal</h4>
+                  <p>Dedicated portal for accessing timetable, assignments, and resources.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Study Materials</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Assignments</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Grade View</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="module-card-advanced" data-category="communication" data-testid="card-module-mobile">
+                <div class="module-card-header">
+                  <div class="module-icon-advanced bg-gradient-warning">
+                    <i class="bi bi-phone"></i>
+                  </div>
+                  <span class="module-badge">New</span>
+                </div>
+                <div class="module-card-body">
+                  <h4>Mobile Applications</h4>
+                  <p>Native apps for iOS and Android with offline support and push notifications.</p>
+                  <ul class="module-features">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> iOS & Android</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Offline Support</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Push Alerts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Comparison -->
   <section class="section">
     <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge bg-secondary-custom bg-opacity-10 text-secondary-custom px-3 py-2 rounded-pill mb-3" data-testid="badge-why">Why Our Modules</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-comparison-title">Built for Modern Education</h2>
+        <p class="lead text-muted" data-testid="text-comparison-subtitle">Every module is designed with your success in mind</p>
+      </div>
+
       <div class="row g-4">
-        <!-- Admission Module -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-admission">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-person-plus-fill"></i>
-              </div>
-              <div class="module-body">
-                <h4>Admission Management</h4>
-                <p>Streamline the entire admission process from enquiry to enrollment with online forms, document management, and automated workflows.</p>
-              </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-icon bg-primary bg-opacity-10">
+              <i class="bi bi-plugin text-primary"></i>
             </div>
-          </a>
+            <h5>100% Integrated</h5>
+            <p class="text-muted">All modules work seamlessly together for unified data flow</p>
+          </div>
         </div>
-
-        <!-- Student Profile -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-student">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-person-badge"></i>
-              </div>
-              <div class="module-body">
-                <h4>Student Profile</h4>
-                <p>Comprehensive student information system with complete profiles, academic records, medical information, and family details.</p>
-              </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-icon bg-success bg-opacity-10">
+              <i class="bi bi-sliders text-success"></i>
             </div>
-          </a>
+            <h5>Fully Customizable</h5>
+            <p class="text-muted">Adapt each module to match your specific requirements</p>
+          </div>
         </div>
-
-        <!-- Fee Management -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-fee">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-credit-card"></i>
-              </div>
-              <div class="module-body">
-                <h4>Fee Management</h4>
-                <p>Complete fee collection with online payments, installment plans, discounts, fine management, and automated receipts.</p>
-              </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-icon bg-warning bg-opacity-10">
+              <i class="bi bi-shield-check text-warning"></i>
             </div>
-          </a>
+            <h5>Bank-Grade Security</h5>
+            <p class="text-muted">256-bit encryption and ISO 27001 certified infrastructure</p>
+          </div>
         </div>
-
-        <!-- Attendance -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-attendance">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-calendar-check"></i>
-              </div>
-              <div class="module-body">
-                <h4>Attendance Management</h4>
-                <p>Digital attendance tracking with biometric integration, real-time updates, and automated parent notifications via SMS.</p>
-              </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="feature-highlight-card">
+            <div class="feature-highlight-icon bg-info bg-opacity-10">
+              <i class="bi bi-cloud-check text-info"></i>
             </div>
-          </a>
-        </div>
-
-        <!-- Examination -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-exam">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-clipboard-data"></i>
-              </div>
-              <div class="module-body">
-                <h4>Examination & Results</h4>
-                <p>Complete exam management including scheduling, online tests, automated grading, report cards, and performance analytics.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Timetable -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-timetable">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-calendar2-week"></i>
-              </div>
-              <div class="module-body">
-                <h4>Timetable Management</h4>
-                <p>Intelligent timetable creation with conflict detection, teacher substitution, period management, and instant notifications.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- HR & Payroll -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-hr">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="module-body">
-                <h4>HR & Payroll</h4>
-                <p>Complete HR solution with staff management, attendance, leave tracking, performance evaluation, and automated payroll processing.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Library -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-library">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <div class="module-body">
-                <h4>Library Management</h4>
-                <p>Digital library system with book cataloging, barcode scanning, issue-return tracking, fine management, and online search.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Transport -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-transport">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-bus-front"></i>
-              </div>
-              <div class="module-body">
-                <h4>Transport Management</h4>
-                <p>Complete transport solution with route planning, vehicle tracking, driver management, and real-time GPS integration.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Hostel -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-hostel">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-building"></i>
-              </div>
-              <div class="module-body">
-                <h4>Hostel Management</h4>
-                <p>Comprehensive hostel management with room allocation, attendance, meal planning, visitor logs, and fee collection.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Parent Portal -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-parent">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-person-heart"></i>
-              </div>
-              <div class="module-body">
-                <h4>Parent Portal</h4>
-                <p>Interactive parent portal for real-time access to child's attendance, grades, assignments, fees, and direct teacher communication.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Student Portal -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-student-portal">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-person-workspace"></i>
-              </div>
-              <div class="module-body">
-                <h4>Student Portal</h4>
-                <p>Dedicated student portal for accessing timetable, assignments, grades, study materials, and online learning resources.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Mobile App -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-mobile">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-phone"></i>
-              </div>
-              <div class="module-body">
-                <h4>Mobile Applications</h4>
-                <p>Native mobile apps for iOS and Android devices with offline support, push notifications, and seamless synchronization.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Inventory -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-inventory">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-box-seam"></i>
-              </div>
-              <div class="module-body">
-                <h4>Inventory Management</h4>
-                <p>Track and manage school assets, supplies, equipment with barcode scanning, stock alerts, and purchase management.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Accounts -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-accounts">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-calculator"></i>
-              </div>
-              <div class="module-body">
-                <h4>Accounting & Finance</h4>
-                <p>Complete accounting solution with ledger management, income-expense tracking, budgeting, and financial reporting.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Communication -->
-        <div class="col-lg-4 col-md-6">
-          <a href="module-template.html" class="text-decoration-none" data-testid="link-module-communication">
-            <div class="module-card">
-              <div class="module-icon">
-                <i class="bi bi-chat-dots"></i>
-              </div>
-              <div class="module-body">
-                <h4>Communication Hub</h4>
-                <p>Unified communication platform with SMS, email, push notifications, announcements, and internal messaging system.</p>
-              </div>
-            </div>
-          </a>
+            <h5>Cloud-Based</h5>
+            <p class="text-muted">Access from anywhere with automatic updates and backups</p>
+          </div>
         </div>
       </div>
     </div>
@@ -307,9 +557,17 @@
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
-      <h2 data-testid="text-cta-title">Ready to Explore Our Modules?</h2>
-      <p class="lead" data-testid="text-cta-subtitle">Schedule a personalized demo to see how our modules can transform your school</p>
-      <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">Request a Free Demo</a>
+      <div class="row align-items-center">
+        <div class="col-lg-8 text-center text-lg-start mb-4 mb-lg-0">
+          <h2 data-testid="text-cta-title">Ready to Transform Your School?</h2>
+          <p class="lead mb-0" data-testid="text-cta-subtitle">Schedule a personalized demo to see how our modules work together</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">
+            <i class="bi bi-calendar-check me-2"></i>Book Free Demo
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
