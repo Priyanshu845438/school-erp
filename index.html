@@ -1,460 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acadify School ERP - Complete School Management Software for Indian Schools. Manage students, fees, attendance, exams with 40+ modules. Trusted by 125+ schools managing 180,000+ students.">
-    <meta name="keywords" content="school erp, school management software, school management system, student information system, fee management, attendance system, exam management, India">
-    <meta name="author" content="Acadify School ERP">
-    <meta property="og:title" content="Acadify School ERP - Complete School Management Software">
-    <meta property="og:description" content="Simplify your school management operations with the best School ERP software in India. Trusted by 125+ schools.">
-    <meta property="og:type" content="website">
-    
-    <title>Acadify School ERP - Complete School Management Software | Best School ERP in India</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"="width=device-width, initial-scale=1.0">
+  <title>Acadify Solution | The All-in-One School ERP Software</title>
+  <meta name="description" content="Streamline your school's operations with Acadify Solution. Our powerful ERP software manages admissions, fees, attendance, and communication effortlessly.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">Acadify School ERP</a>
-            <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/features.html">Features</a></li>
-                <li><a href="pages/modules.html">Modules</a></li>
-                <li><a href="pages/pricing.html">Pricing</a></li>
-                <li><a href="pages/mobile-apps.html">Mobile Apps</a></li>
-                <li><a href="pages/why-acadify.html">Why Acadify</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/demo.html" class="btn btn-primary">Book Free Demo</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" data-testid="link-home">
+        <i class="bi bi-mortarboard-fill"></i> Acadify Solution
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-testid="button-menu-toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-testid="link-nav-home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/modules.html" data-testid="link-nav-modules">Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/pricing.html" data-testid="link-nav-pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/about.html" data-testid="link-nav-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contact.html" data-testid="link-nav-contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-3" href="pages/demo.html" data-testid="button-demo">Request a Demo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="grid grid-2">
-                <div class="hero-content">
-                    <h1>Acadify School Management Software and Mobile Apps</h1>
-                    <p class="hero-subtitle">Simplify your school management operations with the best School ERP software!</p>
-                    <div class="hero-buttons">
-                        <a href="pages/demo.html" class="btn btn-primary btn-lg">Book A Free Demo</a>
-                        <a href="pages/features.html" class="btn btn-outline btn-lg">Explore Features</a>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 data-testid="text-hero-title">The Future of School Management is Here</h1>
+          <p class="lead" data-testid="text-hero-subtitle">Empower your educational institution with our comprehensive ERP solution. Streamline operations, enhance communication, and focus on what matters most - education.</p>
+          <div class="mt-4">
+            <a href="demo.html" class="btn btn-primary btn-lg me-3" data-testid="button-hero-demo">Request a Free Demo</a>
+            <a href="modules.html" class="btn btn-outline-primary btn-lg" data-testid="button-hero-features">Explore Features</a>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <img src="https://placehold.co/600x450/0D47A1/FFFFFF?text=Dashboard+Mockup" alt="Acadify Solution Dashboard" class="img-fluid rounded shadow-lg" data-testid="img-hero-dashboard">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="logo-scroller">
+    <div class="container">
+      <h6 class="text-center text-muted mb-4">Trusted by 500+ Educational Institutions Worldwide</h6>
+      <div class="logo-track">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+1" alt="School Logo 1" data-testid="img-client-1">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+2" alt="School Logo 2" data-testid="img-client-2">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+3" alt="School Logo 3" data-testid="img-client-3">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+4" alt="School Logo 4" data-testid="img-client-4">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+5" alt="School Logo 5" data-testid="img-client-5">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+6" alt="School Logo 6" data-testid="img-client-6">
+        <!-- Duplicate for seamless loop -->
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+1" alt="School Logo 1" data-testid="img-client-1-dup">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+2" alt="School Logo 2" data-testid="img-client-2-dup">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+3" alt="School Logo 3" data-testid="img-client-3-dup">
+        <img src="https://placehold.co/150x50/E0E0E0/757575?text=School+4" alt="School Logo 4" data-testid="img-client-4-dup">
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-testid="text-features-title">Comprehensive Features for Modern Schools</h2>
+      <p class="section-subtitle" data-testid="text-features-subtitle">Everything you need to manage your educational institution efficiently</p>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-student">
+            <div class="icon">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <h3>Student Management</h3>
+            <p>Complete student lifecycle management from admission to alumni with detailed profiles, academic history, and progress tracking.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-fee">
+            <div class="icon">
+              <i class="bi bi-credit-card"></i>
+            </div>
+            <h3>Fee Collection</h3>
+            <p>Automated fee management with online payment integration, customizable fee structures, and real-time financial reporting.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-attendance">
+            <div class="icon">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+            <h3>Smart Attendance</h3>
+            <p>Digital attendance tracking with biometric integration, automated notifications, and comprehensive attendance analytics.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-communication">
+            <div class="icon">
+              <i class="bi bi-chat-dots"></i>
+            </div>
+            <h3>Parent Communication</h3>
+            <p>Seamless communication between teachers, parents, and students through SMS, email, and mobile app notifications.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-exam">
+            <div class="icon">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+            <h3>Examination Management</h3>
+            <p>End-to-end exam management including scheduling, online assessments, automated grading, and report card generation.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-hr">
+            <div class="icon">
+              <i class="bi bi-people"></i>
+            </div>
+            <h3>HR & Payroll</h3>
+            <p>Complete HR solution for staff management, attendance, leave tracking, and automated payroll processing.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-timetable">
+            <div class="icon">
+              <i class="bi bi-calendar2-week"></i>
+            </div>
+            <h3>Timetable Management</h3>
+            <p>Intelligent timetable creation with conflict detection, substitute teacher management, and instant updates.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" data-testid="card-feature-library">
+            <div class="icon">
+              <i class="bi bi-book"></i>
+            </div>
+            <h3>Library Management</h3>
+            <p>Digital library system with book cataloging, issue-return tracking, fine management, and online book search.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Acadify Section -->
+  <section class="section bg-light-custom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="https://placehold.co/550x400/00ACC1/FFFFFF?text=Modern+School+Management" alt="Why Choose Acadify" class="img-fluid rounded shadow" data-testid="img-why-acadify">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4" data-testid="text-why-title">Why Choose Acadify Solution?</h2>
+          <div class="mb-3">
+            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Increase Efficiency by 40%</h5>
+            <p class="text-muted">Automate repetitive tasks and streamline workflows to save valuable time and resources.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Improve Parent-Teacher Engagement</h5>
+            <p class="text-muted">Foster better communication and collaboration with real-time updates and mobile access.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Secure & Reliable Data</h5>
+            <p class="text-muted">Bank-grade security with automatic backups, ensuring your data is always safe and accessible.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Easy to Use Interface</h5>
+            <p class="text-muted">Intuitive design that requires minimal training, making adoption seamless for all users.</p>
+          </div>
+          <div class="mb-3">
+            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> 24/7 Support</h5>
+            <p class="text-muted">Dedicated support team available round the clock to assist you whenever you need help.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-testid="text-showcase-title">Explore Our Platform</h2>
+      <p class="section-subtitle" data-testid="text-showcase-subtitle">Tailored interfaces for every stakeholder in your institution</p>
+      
+      <ul class="nav nav-tabs" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" data-testid="button-tab-admin">Admin Dashboard</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#teacher" type="button" role="tab" data-testid="button-tab-teacher">Teacher Portal</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="parent-tab" data-bs-toggle="tab" data-bs-target="#parent" type="button" role="tab" data-testid="button-tab-parent">Parent App</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content mt-4" id="productTabsContent">
+        <div class="tab-pane fade show active" id="admin" role="tabpanel" data-testid="panel-admin">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <img src="https://placehold.co/700x450/0D47A1/FFFFFF?text=Admin+Dashboard" alt="Admin Dashboard" class="img-fluid rounded shadow" data-testid="img-admin-dashboard">
+            </div>
+            <div class="col-lg-5">
+              <h3>Powerful Admin Dashboard</h3>
+              <p>Get a complete overview of your institution with real-time analytics, quick actions, and customizable widgets. Monitor admissions, finances, attendance, and performance all from one place.</p>
+              <ul>
+                <li>Real-time analytics and reports</li>
+                <li>Customizable dashboard widgets</li>
+                <li>Quick access to all modules</li>
+                <li>Multi-branch management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="teacher" role="tabpanel" data-testid="panel-teacher">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <img src="https://placehold.co/700x450/00ACC1/FFFFFF?text=Teacher+Portal" alt="Teacher Portal" class="img-fluid rounded shadow" data-testid="img-teacher-portal">
+            </div>
+            <div class="col-lg-5">
+              <h3>Streamlined Teacher Portal</h3>
+              <p>Empower educators with tools to manage classes, track student progress, communicate with parents, and create assessments efficiently.</p>
+              <ul>
+                <li>Easy attendance marking</li>
+                <li>Online assignment creation</li>
+                <li>Student progress tracking</li>
+                <li>Parent communication tools</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="parent" role="tabpanel" data-testid="panel-parent">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <img src="https://placehold.co/700x450/0D47A1/FFFFFF?text=Parent+Mobile+App" alt="Parent Mobile App" class="img-fluid rounded shadow" data-testid="img-parent-app">
+            </div>
+            <div class="col-lg-5">
+              <h3>Connected Parent App</h3>
+              <p>Keep parents engaged and informed with instant notifications, real-time updates, and easy access to their child's academic journey.</p>
+              <ul>
+                <li>Real-time attendance updates</li>
+                <li>Fee payment gateway</li>
+                <li>Teacher communication</li>
+                <li>Exam results and report cards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light-custom">
+    <div class="container">
+      <h2 class="section-title" data-testid="text-testimonials-title">What Our Clients Say</h2>
+      <p class="section-subtitle" data-testid="text-testimonials-subtitle">Trusted by educational leaders across the globe</p>
+      
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card" data-testid="card-testimonial-1">
+                  <div class="quote-icon">"</div>
+                  <p>Acadify Solution has transformed the way we manage our school. The automation has saved us countless hours, and the parent portal has significantly improved communication. Highly recommended!</p>
+                  <div class="testimonial-author">
+                    <img src="https://placehold.co/60x60/0D47A1/FFFFFF?text=JD" alt="John Davis" data-testid="img-testimonial-author-1">
+                    <div class="author-info">
+                      <h5>John Davis</h5>
+                      <p>Principal, Greenfield International School</p>
                     </div>
+                  </div>
                 </div>
-                <div class="hero-content">
-                    <div class="card">
-                        <h3 class="text-center mb-lg">Book A Free Demo</h3>
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label class="form-label" for="demo-name">Full Name</label>
-                                <input type="text" id="demo-name" name="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="demo-email">Email Address</label>
-                                <input type="email" id="demo-email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="demo-phone">Phone Number</label>
-                                <input type="tel" id="demo-phone" name="phone" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="demo-school">School Name</label>
-                                <input type="text" id="demo-school" name="school" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="demo-role">Your Role</label>
-                                <select id="demo-role" name="role" class="form-control" required>
-                                    <option value="">-- Select Your Role --</option>
-                                    <option value="director">Director</option>
-                                    <option value="principal">Principal</option>
-                                    <option value="it-head">IT Head</option>
-                                    <option value="teacher">Teacher</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                        </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card" data-testid="card-testimonial-2">
+                  <div class="quote-icon">"</div>
+                  <p>The implementation was smooth and the support team was exceptional. Our teachers adapted quickly to the system, and we've seen a 50% reduction in administrative workload. It's been a game-changer.</p>
+                  <div class="testimonial-author">
+                    <img src="https://placehold.co/60x60/00ACC1/FFFFFF?text=SM" alt="Sarah Mitchell" data-testid="img-testimonial-author-2">
+                    <div class="author-info">
+                      <h5>Sarah Mitchell</h5>
+                      <p>Director, Sunshine Academy</p>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="grid grid-4">
-                <article class="stat-item">
-                    <div class="stat-number">125+</div>
-                    <div class="stat-label">Schools</div>
-                </article>
-                <article class="stat-item">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Modules</div>
-                </article>
-                <article class="stat-item">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Years Expertise</div>
-                </article>
-                <article class="stat-item">
-                    <div class="stat-number">180K+</div>
-                    <div class="stat-label">Students</div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ERP Modules Section -->
-    <section class="features-section" id="erp">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Complete Solution</div>
-                <h2 class="section-title">ERP Modules</h2>
-                <p class="section-description">Comprehensive modules to manage every aspect of your school operations</p>
-            </div>
-            <div class="grid grid-3">
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card" data-testid="card-testimonial-3">
+                  <div class="quote-icon">"</div>
+                  <p>As a school administrator, I appreciate the comprehensive reporting features. We can now make data-driven decisions quickly. The mobile app is a huge hit with parents too!</p>
+                  <div class="testimonial-author">
+                    <img src="https://placehold.co/60x60/0D47A1/FFFFFF?text=RK" alt="Rajesh Kumar" data-testid="img-testimonial-author-3">
+                    <div class="author-info">
+                      <h5>Rajesh Kumar</h5>
+                      <p>Administrator, Delhi Public School</p>
                     </div>
-                    <h3>Administration</h3>
-                    <ul class="pricing-features">
-                        <li>Student Management</li>
-                        <li>Admission and Registration</li>
-                        <li>Transport Management</li>
-                        <li>Library and Inventory</li>
-                        <li>Hostel Management</li>
-                        <li>Health Management</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                    </div>
-                    <h3>Academics</h3>
-                    <ul class="pricing-features">
-                        <li>Assessment and Report Cards</li>
-                        <li>Homework and Assignment</li>
-                        <li>Student Attendance</li>
-                        <li>Behaviour Mapping</li>
-                        <li>Lesson Planning</li>
-                        <li>Online Examinations</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h3>Finance</h3>
-                    <ul class="pricing-features">
-                        <li>Fee Collection and Management</li>
-                        <li>Online Fee Payment</li>
-                        <li>Leave and Payroll Management</li>
-                        <li>Financial Accounting</li>
-                        <li>Expense Tracking</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Communication</h3>
-                    <ul class="pricing-features">
-                        <li>Circular and Announcement</li>
-                        <li>One to One Communication</li>
-                        <li>Upload Study Material</li>
-                        <li>Mobile Apps and Web Portals</li>
-                        <li>SMS and Email Integration</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                    </div>
-                    <h3>Online School Activity</h3>
-                    <ul class="pricing-features">
-                        <li>Activities and Competitions</li>
-                        <li>Rewards and Achievements</li>
-                        <li>Group-wise Communication</li>
-                        <li>Online Quiz and Tests</li>
-                        <li>Timetable and Substitution</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </div>
-                    <h3>Secure Your School</h3>
-                    <ul class="pricing-features">
-                        <li>Visitor Management</li>
-                        <li>OTP Verification for Pick Ups</li>
-                        <li>Approval Based Gate Pass</li>
-                        <li>Transport Attendance</li>
-                        <li>CCTV Integration Ready</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile Applications Section -->
-    <section class="section bg-light" id="mobile">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Stay Connected</div>
-                <h2 class="section-title">Mobile Applications</h2>
-                <p class="section-description">Native apps for Android and iOS devices</p>
-            </div>
-            <div class="grid grid-4 mt-lg">
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h4>Parent App</h4>
-                    <p>Track child's progress, fees, and attendance in real-time</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                    </div>
-                    <h4>Teacher App</h4>
-                    <p>Mark attendance, grades, and communicate efficiently</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                    </div>
-                    <h4>Management App</h4>
-                    <p>Complete oversight with analytics and reporting</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                    </div>
-                    <h4>Role Based App</h4>
-                    <p>Customized apps for different user roles</p>
-                </article>
-            </div>
-            <div class="text-center mt-lg">
-                <p><strong>Available on Android and iOS</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integrations Section -->
-    <section class="section" id="integrations">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Seamless Integration</div>
-                <h2 class="section-title">Utility and Integrations</h2>
-            </div>
-            <div class="grid grid-3">
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                            <line x1="1" y1="10" x2="23" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h4>Payment Gateway</h4>
-                    <p>Integrated payment solutions for easy fee collection</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h4>RFID Integration</h4>
-                    <p>Smart card based attendance and access control</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
-                        </svg>
-                    </div>
-                    <h4>Bar Code Reader</h4>
-                    <p>Efficient library and inventory management</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                            <path d="M8.5 8.5v.01"></path>
-                            <path d="M16 15.5v.01"></path>
-                        </svg>
-                    </div>
-                    <h4>Biometric Integration</h4>
-                    <p>Fingerprint-based attendance and security</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
-                    <h4>Tally Integration</h4>
-                    <p>Seamless accounting software integration</p>
-                </article>
-
-                <article class="card text-center">
-                    <div class="card-icon" style="margin: 0 auto;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </div>
-                    <h4>Website Integration</h4>
-                    <p>Connect ERP with your school website</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-subtitle">Success Stories</div>
-                <h2 class="section-title">What Our Clients Say About Us</h2>
-            </div>
-            <div class="grid grid-3">
-                <article class="testimonial-card">
-                    <p class="testimonial-text">"Acadify has been a great help in managing our administrative and academic activities flawlessly. They have always supported us in whatever we needed in the software and have always welcomed suggestions. Teachers are happy, parents are happy and we don't have any complaints."</p>
-                    <div class="testimonial-author">Mrs. Sharma</div>
-                    <div class="testimonial-position">Director, Delhi Public School</div>
-                </article>
-
-                <article class="testimonial-card">
-                    <p class="testimonial-text">"We are using Acadify School ERP from last 3 years and we highly recommend Acadify services to all the schools as it strengthens school's performance in so many ways. The reporting features are exceptional."</p>
-                    <div class="testimonial-author">Mr. Kumar</div>
-                    <div class="testimonial-position">Principal, St. Xavier's School</div>
-                </article>
-
-                <article class="testimonial-card">
-                    <p class="testimonial-text">"We are extremely happy with the Acadify software, its ease of use, the dynamic reporting, great features and excellent support. The mobile apps have transformed parent engagement at our school."</p>
-                    <div class="testimonial-author">Ms. Gupta</div>
-                    <div class="testimonial-position">IT Head, Modern High School</div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Transform Your School Management?</h2>
-            <p>Join 125+ schools already using Acadify to manage over 180,000 students efficiently. Request a demo today and see how we can help your institution.</p>
-            <div class="cta-buttons">
-                <a href="pages/demo.html" class="btn btn-white btn-lg">Book Free Demo</a>
-                <a href="tel:+917015097673" class="btn btn-outline btn-lg">Call +91-7015097673</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-4">
-                <div>
-                    <h4>Acadify School ERP</h4>
-                    <p>India's most trusted school management software. Empowering 125+ schools to manage 180,000+ students efficiently with comprehensive features and dedicated support.</p>
+                  </div>
                 </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/features.html">Features</a></li>
-                        <li><a href="pages/pricing.html">Pricing</a></li>
-                        <li><a href="pages/about.html">About Us</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul>
-                        <li><a href="pages/modules.html">Modules</a></li>
-                        <li><a href="pages/mobile-apps.html">Mobile Apps</a></li>
-                        <li><a href="pages/reports.html">Reports</a></li>
-                        <li><a href="pages/case-studies.html">Case Studies</a></li>
-                        <li><a href="pages/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>Phone: <a href="tel:+917015097673">+91-7015097673</a></li>
-                        <li>Email: <a href="mailto:info@acadify.com">info@acadify.com</a></li>
-                        <li>Location: Gujarat, India</li>
-                        <li>Hours: Mon-Sat 9:00 AM - 6:00 PM</li>
-                    </ul>
-                </div>
+              </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Acadify School ERP. All rights reserved. | <a href="pages/faq.html">Privacy Policy</a> | <a href="pages/faq.html">Terms of Service</a></p>
-            </div>
+          </div>
         </div>
-    </footer>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" data-testid="button-testimonial-prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" data-testid="button-testimonial-next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
 
-    <script src="assets/js/main.js"></script>
+  <!-- Final CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-testid="text-cta-title">Get Started with Acadify Solution Today</h2>
+      <p class="lead" data-testid="text-cta-subtitle">Join 500+ schools already transforming their operations with our platform</p>
+      <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">Request a Free Demo</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg" data-testid="button-cta-contact">Contact Sales</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5><i class="bi bi-mortarboard-fill"></i> Acadify Solution</h5>
+          <p class="mt-3">Empowering Educational Excellence Through Technology. Your trusted partner in modern school management.</p>
+          <div class="social-icons mt-3">
+            <a href="#" data-testid="link-social-facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" data-testid="link-social-twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" data-testid="link-social-linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="#" data-testid="link-social-instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="modules.html" data-testid="link-footer-modules">All Modules</a></li>
+            <li><a href="pricing.html" data-testid="link-footer-pricing">Pricing</a></li>
+            <li><a href="demo.html" data-testid="link-footer-demo">Request Demo</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html" data-testid="link-footer-about">About Us</a></li>
+            <li><a href="blog.html" data-testid="link-footer-blog">Blog</a></li>
+            <li><a href="contact.html" data-testid="link-footer-contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="faq.html" data-testid="link-footer-faq">FAQ</a></li>
+            <li><a href="#" data-testid="link-footer-help">Help Center</a></li>
+            <li><a href="#" data-testid="link-footer-support">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html" data-testid="link-footer-privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-testid="link-footer-terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Acadify Solution. All rights reserved. | Empowering Educational Excellence Through Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,177 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transparent pricing for Acadify School ERP. Plans starting from ₹990/month with no hidden costs.">
-    <title>Pricing - Acadify School ERP</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/components.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans | Acadify Solution</title>
+  <meta name="description" content="Find the perfect plan for your institution. Acadify Solution offers flexible and affordable pricing for our school ERP software.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="../index.html" class="navbar-brand">Acadify School ERP</a>
-            <div class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="modules.html">Modules</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="mobile-apps.html">Mobile Apps</a></li>
-                <li><a href="why-acadify.html">Why Acadify</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="demo.html" class="btn btn-primary">Request Demo</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="page-header">
-        <div class="container">
-            <h1>Simple, Transparent Pricing</h1>
-            <p>Choose the perfect plan for your school. No hidden costs, cancel anytime.</p>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" data-testid="link-home">
+        <i class="bi bi-mortarboard-fill"></i> Acadify Solution
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-testid="button-menu-toggle">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" data-testid="link-nav-home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="modules.html" data-testid="link-nav-modules">Modules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="pricing.html" data-testid="link-nav-pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" data-testid="link-nav-about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" data-testid="link-nav-contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-3" href="demo.html" data-testid="button-demo">Request a Demo</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <section class="section">
-        <div class="container">
-            <div class="grid grid-3">
-                <div class="pricing-card">
-                    <div class="pricing-title">Basic</div>
-                    <div class="pricing-price">₹990</div>
-                    <div class="pricing-period">per month</div>
-                    <ul class="pricing-features">
-                        <li>Up to 200 students</li>
-                        <li>Student management</li>
-                        <li>Attendance tracking</li>
-                        <li>Fee management</li>
-                        <li>Basic reporting</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="demo.html" class="btn btn-outline btn-lg">Get Started</a>
-                </div>
+  <!-- Hero Section -->
+  <section class="hero-section py-5">
+    <div class="container text-center">
+      <h1 data-testid="text-hero-title">Simple, Transparent Pricing for Every School Size</h1>
+      <p class="lead" data-testid="text-hero-subtitle">Choose the plan that best fits your institution's needs</p>
+      
+      <!-- Billing Toggle -->
+      <div class="form-check form-switch d-inline-block mt-4">
+        <input class="form-check-input" type="checkbox" id="pricingToggle" data-testid="toggle-billing">
+        <label class="form-check-label ms-2" for="pricingToggle">
+          <span class="me-2">Monthly</span> | <span class="ms-2 fw-bold">Annually (Save 20%)</span>
+        </label>
+      </div>
+    </div>
+  </section>
 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-title">Professional</div>
-                    <div class="pricing-price">₹2,490</div>
-                    <div class="pricing-period">per month</div>
-                    <ul class="pricing-features">
-                        <li>Up to 1000 students</li>
-                        <li>All Basic features</li>
-                        <li>Exam management</li>
-                        <li>SMS gateway</li>
-                        <li>Mobile apps</li>
-                        <li>Advanced reporting</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <a href="demo.html" class="btn btn-primary btn-lg">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-title">Enterprise</div>
-                    <div class="pricing-price">Custom</div>
-                    <div class="pricing-period">contact us</div>
-                    <ul class="pricing-features">
-                        <li>Unlimited students</li>
-                        <li>All Professional features</li>
-                        <li>Custom modules</li>
-                        <li>API access</li>
-                        <li>White labeling</li>
-                        <li>Dedicated account manager</li>
-                        <li>24/7 phone support</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline btn-lg">Contact Sales</a>
-                </div>
+  <!-- Pricing Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Starter Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card" data-testid="card-pricing-starter">
+            <h3>Starter</h3>
+            <p class="text-muted">Perfect for small schools</p>
+            <div class="price">
+              <span class="price-amount" data-monthly="$299" data-annual="$2,870">$299</span>
+              <small>/month</small>
             </div>
-
-            <div class="section-header mt-xl">
-                <h2>All Plans Include</h2>
-            </div>
-            <div class="grid grid-4 mt-lg">
-                <div class="card">
-                    <h4>🔒 Secure Hosting</h4>
-                    <p>Your data is safe with bank-grade security and encryption.</p>
-                </div>
-                <div class="card">
-                    <h4>☁️ Cloud-Based</h4>
-                    <p>Access from anywhere with 99.9% uptime guarantee.</p>
-                </div>
-                <div class="card">
-                    <h4>💾 Auto Backups</h4>
-                    <p>Daily automated backups to protect your data.</p>
-                </div>
-                <div class="card">
-                    <h4>🔄 Free Updates</h4>
-                    <p>Always get the latest features at no extra cost.</p>
-                </div>
-            </div>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Up to 200 students</li>
+              <li><i class="bi bi-check-circle-fill"></i> 10 core modules</li>
+              <li><i class="bi bi-check-circle-fill"></i> Mobile app access</li>
+              <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Basic reporting</li>
+              <li><i class="bi bi-check-circle-fill"></i> Cloud storage (10GB)</li>
+            </ul>
+            <a href="demo.html" class="btn btn-outline-primary w-100" data-testid="button-plan-starter">Choose Starter</a>
+          </div>
         </div>
-    </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Not Sure Which Plan is Right for You?</h2>
-            <p>Request a free demo and we'll help you choose the perfect plan for your school</p>
-            <div class="cta-buttons">
-                <a href="demo.html" class="btn btn-white btn-lg">Request Free Demo</a>
-                <a href="contact.html" class="btn btn-outline btn-lg">Talk to Sales</a>
+        <!-- Professional Plan (Featured) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card featured" data-testid="card-pricing-professional">
+            <span class="badge">Most Popular</span>
+            <h3>Professional</h3>
+            <p class="text-muted">For growing institutions</p>
+            <div class="price">
+              <span class="price-amount" data-monthly="$599" data-annual="$5,750">$599</span>
+              <small>/month</small>
             </div>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Up to 1000 students</li>
+              <li><i class="bi bi-check-circle-fill"></i> All 16 modules</li>
+              <li><i class="bi bi-check-circle-fill"></i> Mobile app + Web portals</li>
+              <li><i class="bi bi-check-circle-fill"></i> Priority phone & email support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Advanced reporting & analytics</li>
+              <li><i class="bi bi-check-circle-fill"></i> Cloud storage (50GB)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom branding</li>
+              <li><i class="bi bi-check-circle-fill"></i> API access</li>
+            </ul>
+            <a href="demo.html" class="btn btn-primary w-100" data-testid="button-plan-professional">Choose Professional</a>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-4">
-                <div>
-                    <h4>Acadify School ERP</h4>
-                    <p>India's most trusted school management software. Empowering 125+ schools to manage 180,000+ students efficiently.</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul>
-                        <li><a href="modules.html">Modules</a></li>
-                        <li><a href="mobile-apps.html">Mobile Apps</a></li>
-                        <li><a href="reports.html">Reports</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>📞 +91-7015097673</li>
-                        <li>📧 info@acadify.com</li>
-                        <li>📍 Gujarat, India</li>
-                    </ul>
-                </div>
+        <!-- Enterprise Plan -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-card" data-testid="card-pricing-enterprise">
+            <h3>Enterprise</h3>
+            <p class="text-muted">For large institutions</p>
+            <div class="price">
+              <span class="text-secondary-custom">Contact Us</span>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Acadify School ERP. All rights reserved.</p>
-            </div>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited students</li>
+              <li><i class="bi bi-check-circle-fill"></i> All modules + custom features</li>
+              <li><i class="bi bi-check-circle-fill"></i> White-label mobile apps</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager</li>
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 priority support</li>
+              <li><i class="bi bi-check-circle-fill"></i> Unlimited cloud storage</li>
+              <li><i class="bi bi-check-circle-fill"></i> Multi-branch management</li>
+              <li><i class="bi bi-check-circle-fill"></i> On-premise deployment option</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom integrations</li>
+              <li><i class="bi bi-check-circle-fill"></i> Training & onboarding</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-primary w-100" data-testid="button-plan-enterprise">Contact Sales</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="../assets/js/main.js"></script>
+  <!-- Feature Comparison Table -->
+  <section class="section bg-light-custom">
+    <div class="container">
+      <h2 class="section-title" data-testid="text-comparison-title">Detailed Feature Comparison</h2>
+      <div class="table-responsive mt-5">
+        <table class="table comparison-table">
+          <thead>
+            <tr>
+              <th>Features</th>
+              <th>Starter</th>
+              <th>Professional</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Student Capacity</td>
+              <td>Up to 200</td>
+              <td>Up to 1000</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Admission Management</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Student & Staff Management</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Fee Collection & Management</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Attendance Tracking</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Examination Management</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Timetable Management</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Parent & Student Portal</td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Library Management</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Transport Management</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Hostel Management</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>HR & Payroll</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Mobile Applications</td>
+              <td>Standard</td>
+              <td>Full Access</td>
+              <td>White-Label</td>
+            </tr>
+            <tr>
+              <td>Custom Branding</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>API Access</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Multi-Branch Support</td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-x-circle-fill text-danger"></i></td>
+              <td><i class="bi bi-check-circle-fill text-success"></i></td>
+            </tr>
+            <tr>
+              <td>Support</td>
+              <td>Email</td>
+              <td>Priority Phone & Email</td>
+              <td>24/7 Dedicated Support</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-testid="text-faq-title">Pricing FAQs</h2>
+      <div class="accordion mt-5" id="pricingFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" data-testid="button-faq-1">
+              Is there a setup fee?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-parent="#pricingFAQ">
+            <div class="accordion-body">
+              No, there are no hidden setup fees. The pricing shown includes complete setup, data migration assistance, and initial training for your team.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" data-testid="button-faq-2">
+              Can I change my plan later?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+            <div class="accordion-body">
+              Yes, you can upgrade or downgrade your plan at any time. When upgrading, you'll be charged the prorated difference. Downgrades take effect at the next billing cycle.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" data-testid="button-faq-3">
+              What payment methods do you accept?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+            <div class="accordion-body">
+              We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. Annual subscriptions can be paid via invoice.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" data-testid="button-faq-4">
+              Is there a free trial available?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+            <div class="accordion-body">
+              Yes, we offer a 14-day free trial with full access to all features. No credit card required to start your trial. Schedule a demo to get started.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" data-testid="button-faq-5">
+              What happens if I exceed my student limit?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-parent="#pricingFAQ">
+            <div class="accordion-body">
+              We'll notify you when you approach your limit. You can either upgrade to the next plan or pay a small per-student fee for additional capacity within your current plan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-testid="text-cta-title">Ready to Get Started?</h2>
+      <p class="lead" data-testid="text-cta-subtitle">Start your free 14-day trial today - no credit card required</p>
+      <a href="demo.html" class="btn btn-light btn-lg" data-testid="button-cta-demo">Start Free Trial</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg" data-testid="button-cta-contact">Contact Sales</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5><i class="bi bi-mortarboard-fill"></i> Acadify Solution</h5>
+          <p class="mt-3">Empowering Educational Excellence Through Technology. Your trusted partner in modern school management.</p>
+          <div class="social-icons mt-3">
+            <a href="#" data-testid="link-social-facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" data-testid="link-social-twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" data-testid="link-social-linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="#" data-testid="link-social-instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="modules.html" data-testid="link-footer-modules">All Modules</a></li>
+            <li><a href="pricing.html" data-testid="link-footer-pricing">Pricing</a></li>
+            <li><a href="demo.html" data-testid="link-footer-demo">Request Demo</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html" data-testid="link-footer-about">About Us</a></li>
+            <li><a href="blog.html" data-testid="link-footer-blog">Blog</a></li>
+            <li><a href="contact.html" data-testid="link-footer-contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="faq.html" data-testid="link-footer-faq">FAQ</a></li>
+            <li><a href="#" data-testid="link-footer-help">Help Center</a></li>
+            <li><a href="#" data-testid="link-footer-support">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html" data-testid="link-footer-privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-testid="link-footer-terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Acadify Solution. All rights reserved. | Empowering Educational Excellence Through Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
