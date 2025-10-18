@@ -50,19 +50,90 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row align-items-center">
+  <section class="hero-section position-relative overflow-hidden">
+    <div class="hero-background-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-75">
         <div class="col-lg-6">
-          <h1 data-testid="text-hero-title">The Future of School Management is Here</h1>
-          <p class="lead" data-testid="text-hero-subtitle">Empower your educational institution with our comprehensive ERP solution. Streamline operations, enhance communication, and focus on what matters most - education.</p>
-          <div class="mt-4">
-            <a href="pages/demo.html" class="btn btn-primary btn-lg me-3" data-testid="button-hero-demo">Request a Free Demo</a>
-            <a href="pages/modules.html" class="btn btn-outline-primary btn-lg" data-testid="button-hero-features">Explore Features</a>
+          <div class="hero-badge mb-3" data-testid="badge-hero">
+            <i class="bi bi-trophy-fill me-2"></i>
+            <span class="fw-semibold">Trusted by 500+ Institutions Worldwide</span>
+          </div>
+          <h1 class="display-3 fw-bold mb-4" data-testid="text-hero-title">
+            The Future of 
+            <span class="text-gradient">School Management</span> 
+            is Here
+          </h1>
+          <p class="lead mb-4" data-testid="text-hero-subtitle">Empower your educational institution with our comprehensive ERP solution. Streamline operations, enhance communication, and focus on what matters most - education.</p>
+          
+          <div class="hero-stats row g-3 mb-4">
+            <div class="col-4">
+              <div class="stat-item" data-testid="stat-schools">
+                <h3 class="fw-bold text-primary mb-0">500+</h3>
+                <p class="small text-muted mb-0">Schools</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item" data-testid="stat-students">
+                <h3 class="fw-bold text-secondary-custom mb-0">2M+</h3>
+                <p class="small text-muted mb-0">Students</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item" data-testid="stat-countries">
+                <h3 class="fw-bold text-primary mb-0">50+</h3>
+                <p class="small text-muted mb-0">Countries</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex flex-wrap gap-3">
+            <a href="pages/demo.html" class="btn btn-primary btn-lg px-4 shadow" data-testid="button-hero-demo">
+              <i class="bi bi-play-circle me-2"></i>Request a Free Demo
+            </a>
+            <a href="pages/modules.html" class="btn btn-outline-primary btn-lg px-4" data-testid="button-hero-features">
+              <i class="bi bi-grid-3x3-gap me-2"></i>Explore Features
+            </a>
+          </div>
+          
+          <div class="hero-features mt-4">
+            <div class="d-flex flex-wrap gap-3 small text-muted">
+              <span data-testid="feature-badge-1"><i class="bi bi-check-circle-fill text-success me-1"></i> No Credit Card Required</span>
+              <span data-testid="feature-badge-2"><i class="bi bi-check-circle-fill text-success me-1"></i> Free 30-Day Trial</span>
+              <span data-testid="feature-badge-3"><i class="bi bi-check-circle-fill text-success me-1"></i> 24/7 Support</span>
+            </div>
           </div>
         </div>
+        
         <div class="col-lg-6 mt-5 mt-lg-0">
-          <img src="https://placehold.co/600x450/0D47A1/FFFFFF?text=Dashboard+Mockup" alt="Acadify Solution Dashboard" class="img-fluid rounded shadow-lg" data-testid="img-hero-dashboard">
+          <div class="hero-image-wrapper position-relative">
+            <div class="floating-card floating-card-1" data-testid="floating-card-1">
+              <i class="bi bi-graph-up-arrow text-success"></i>
+              <div>
+                <div class="small text-muted">Efficiency Boost</div>
+                <div class="fw-bold">+40%</div>
+              </div>
+            </div>
+            <div class="floating-card floating-card-2" data-testid="floating-card-2">
+              <i class="bi bi-people-fill text-primary"></i>
+              <div>
+                <div class="small text-muted">Active Users</div>
+                <div class="fw-bold">2M+</div>
+              </div>
+            </div>
+            <div class="floating-card floating-card-3" data-testid="floating-card-3">
+              <i class="bi bi-star-fill text-warning"></i>
+              <div>
+                <div class="small text-muted">Rating</div>
+                <div class="fw-bold">4.9/5</div>
+              </div>
+            </div>
+            <img src="images/hero-dashboard.jpg" alt="Acadify Solution Dashboard" class="img-fluid rounded-4 shadow-lg" data-testid="img-hero-dashboard">
+          </div>
         </div>
       </div>
     </div>
@@ -179,33 +250,129 @@
   </section>
 
   <!-- Why Acadify Section -->
-  <section class="section bg-light-custom">
+  <section class="section bg-light-custom position-relative">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="https://placehold.co/550x400/00ACC1/FFFFFF?text=Modern+School+Management" alt="Why Choose Acadify" class="img-fluid rounded shadow" data-testid="img-why-acadify">
+          <div class="position-relative">
+            <div class="why-acadify-image-bg"></div>
+            <img src="images/why-acadify.jpg" alt="Why Choose Acadify" class="img-fluid rounded-4 shadow-lg position-relative" data-testid="img-why-acadify">
+            
+            <div class="achievement-badge achievement-badge-1" data-testid="badge-achievement-1">
+              <div class="icon-wrapper bg-success">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <div>
+                <div class="fw-bold">ISO 27001</div>
+                <div class="small text-muted">Certified</div>
+              </div>
+            </div>
+            
+            <div class="achievement-badge achievement-badge-2" data-testid="badge-achievement-2">
+              <div class="icon-wrapper bg-primary">
+                <i class="bi bi-shield-fill-check"></i>
+              </div>
+              <div>
+                <div class="fw-bold">99.9%</div>
+                <div class="small text-muted">Uptime</div>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <div class="col-lg-6">
-          <h2 class="mb-4" data-testid="text-why-title">Why Choose Acadify Solution?</h2>
-          <div class="mb-3">
-            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Increase Efficiency by 40%</h5>
-            <p class="text-muted">Automate repetitive tasks and streamline workflows to save valuable time and resources.</p>
+          <div class="mb-4">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-section">Why Choose Us</span>
+            <h2 class="display-5 fw-bold mb-3" data-testid="text-why-title">Why Choose Acadify Solution?</h2>
+            <p class="text-muted lead">Transform your institution with the most advanced and trusted school ERP platform</p>
           </div>
-          <div class="mb-3">
-            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Improve Parent-Teacher Engagement</h5>
-            <p class="text-muted">Foster better communication and collaboration with real-time updates and mobile access.</p>
+          
+          <div class="why-features">
+            <div class="why-feature-item mb-4" data-testid="feature-efficiency">
+              <div class="d-flex">
+                <div class="feature-icon-box bg-gradient-primary">
+                  <i class="bi bi-rocket-takeoff-fill"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-2">Increase Efficiency by 40%</h5>
+                  <p class="text-muted mb-2">Automate repetitive tasks and streamline workflows to save valuable time and resources. Our AI-powered automation handles scheduling, grading, and reporting.</p>
+                  <div class="small text-primary">
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                    <span>Proven ROI in 6 months</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="why-feature-item mb-4" data-testid="feature-engagement">
+              <div class="d-flex">
+                <div class="feature-icon-box bg-gradient-secondary">
+                  <i class="bi bi-chat-heart-fill"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-2">Improve Parent-Teacher Engagement</h5>
+                  <p class="text-muted mb-2">Foster better communication and collaboration with real-time updates, instant messaging, and comprehensive parent portals with mobile access.</p>
+                  <div class="small text-secondary-custom">
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                    <span>85% increase in parent satisfaction</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="why-feature-item mb-4" data-testid="feature-security">
+              <div class="d-flex">
+                <div class="feature-icon-box bg-gradient-success">
+                  <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-2">Bank-Grade Security & Compliance</h5>
+                  <p class="text-muted mb-2">Enterprise-level security with 256-bit encryption, automatic backups every hour, and full GDPR & FERPA compliance ensuring your data is always protected.</p>
+                  <div class="small text-success">
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                    <span>ISO 27001 & SOC 2 certified</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="why-feature-item mb-4" data-testid="feature-interface">
+              <div class="d-flex">
+                <div class="feature-icon-box bg-gradient-info">
+                  <i class="bi bi-ui-checks-grid"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-2">Intuitive User Interface</h5>
+                  <p class="text-muted mb-2">Modern, clean design that requires minimal training. Mobile-responsive dashboard accessible on any device with offline capabilities.</p>
+                  <div class="small text-info">
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                    <span>Average onboarding time: 2 days</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="why-feature-item" data-testid="feature-support">
+              <div class="d-flex">
+                <div class="feature-icon-box bg-gradient-warning">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <h5 class="mb-2">24/7 Premium Support</h5>
+                  <p class="text-muted mb-2">Dedicated support team with average response time under 5 minutes. Free training, onboarding assistance, and unlimited technical support.</p>
+                  <div class="small text-warning">
+                    <i class="bi bi-arrow-right-circle-fill me-1"></i>
+                    <span>4.9/5 support satisfaction rating</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Secure & Reliable Data</h5>
-            <p class="text-muted">Bank-grade security with automatic backups, ensuring your data is always safe and accessible.</p>
-          </div>
-          <div class="mb-3">
-            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> Easy to Use Interface</h5>
-            <p class="text-muted">Intuitive design that requires minimal training, making adoption seamless for all users.</p>
-          </div>
-          <div class="mb-3">
-            <h5><i class="bi bi-check-circle-fill text-secondary-custom me-2"></i> 24/7 Support</h5>
-            <p class="text-muted">Dedicated support team available round the clock to assist you whenever you need help.</p>
+          
+          <div class="mt-4">
+            <a href="pages/about.html" class="btn btn-primary px-4" data-testid="button-learn-more">
+              <i class="bi bi-arrow-right-circle me-2"></i>Learn More About Us
+            </a>
           </div>
         </div>
       </div>
@@ -213,74 +380,300 @@
   </section>
 
   <!-- Product Showcase -->
-  <section class="section">
+  <section class="section position-relative">
     <div class="container">
-      <h2 class="section-title" data-testid="text-showcase-title">Explore Our Platform</h2>
-      <p class="section-subtitle" data-testid="text-showcase-subtitle">Tailored interfaces for every stakeholder in your institution</p>
+      <div class="text-center mb-5">
+        <span class="badge bg-secondary-custom bg-opacity-10 text-secondary-custom px-3 py-2 rounded-pill mb-3" data-testid="badge-platform">Our Platform</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-showcase-title">Explore Our Platform</h2>
+        <p class="lead text-muted" data-testid="text-showcase-subtitle">Tailored interfaces for every stakeholder in your institution - all connected, all powerful</p>
+      </div>
       
-      <ul class="nav nav-tabs" id="productTabs" role="tablist">
+      <ul class="nav nav-pills justify-content-center mb-4 platform-tabs" id="productTabs" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" data-testid="button-tab-admin">Admin Dashboard</button>
+          <button class="nav-link active" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" data-testid="button-tab-admin">
+            <i class="bi bi-speedometer2 d-block fs-4 mb-2"></i>
+            <span class="fw-semibold">Admin Dashboard</span>
+          </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#teacher" type="button" role="tab" data-testid="button-tab-teacher">Teacher Portal</button>
+          <button class="nav-link" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#teacher" type="button" role="tab" data-testid="button-tab-teacher">
+            <i class="bi bi-person-workspace d-block fs-4 mb-2"></i>
+            <span class="fw-semibold">Teacher Portal</span>
+          </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="parent-tab" data-bs-toggle="tab" data-bs-target="#parent" type="button" role="tab" data-testid="button-tab-parent">Parent App</button>
+          <button class="nav-link" id="parent-tab" data-bs-toggle="tab" data-bs-target="#parent" type="button" role="tab" data-testid="button-tab-parent">
+            <i class="bi bi-phone d-block fs-4 mb-2"></i>
+            <span class="fw-semibold">Parent App</span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="student-tab" data-bs-toggle="tab" data-bs-target="#student" type="button" role="tab" data-testid="button-tab-student">
+            <i class="bi bi-backpack d-block fs-4 mb-2"></i>
+            <span class="fw-semibold">Student Portal</span>
+          </button>
         </li>
       </ul>
       
-      <div class="tab-content mt-4" id="productTabsContent">
+      <div class="tab-content mt-5" id="productTabsContent">
         <div class="tab-pane fade show active" id="admin" role="tabpanel" data-testid="panel-admin">
-          <div class="row align-items-center">
+          <div class="row align-items-center g-4">
             <div class="col-lg-7">
-              <img src="https://placehold.co/700x450/0D47A1/FFFFFF?text=Admin+Dashboard" alt="Admin Dashboard" class="img-fluid rounded shadow" data-testid="img-admin-dashboard">
+              <div class="platform-image-wrapper">
+                <img src="images/admin-dashboard.jpg" alt="Admin Dashboard" class="img-fluid rounded-4 shadow-lg" data-testid="img-admin-dashboard">
+              </div>
             </div>
             <div class="col-lg-5">
-              <h3>Powerful Admin Dashboard</h3>
-              <p>Get a complete overview of your institution with real-time analytics, quick actions, and customizable widgets. Monitor admissions, finances, attendance, and performance all from one place.</p>
-              <ul>
-                <li>Real-time analytics and reports</li>
-                <li>Customizable dashboard widgets</li>
-                <li>Quick access to all modules</li>
-                <li>Multi-branch management</li>
-              </ul>
+              <div class="platform-badge mb-3">
+                <i class="bi bi-speedometer2 me-2"></i>
+                <span>For Administrators</span>
+              </div>
+              <h3 class="display-6 fw-bold mb-3">Powerful Admin Dashboard</h3>
+              <p class="lead text-muted mb-4">Get a complete overview of your institution with real-time analytics, quick actions, and customizable widgets. Monitor admissions, finances, attendance, and performance all from one centralized command center.</p>
+              
+              <div class="feature-list-detailed">
+                <div class="feature-list-item mb-3" data-testid="admin-feature-1">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-graph-up text-primary fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Real-time Analytics & Business Intelligence</h6>
+                      <p class="text-muted small mb-0">Advanced dashboards with 50+ pre-built reports and custom report builder</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="admin-feature-2">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-grid-3x3-gap text-secondary-custom fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Customizable Dashboard Widgets</h6>
+                      <p class="text-muted small mb-0">Drag-and-drop interface to personalize your workspace</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="admin-feature-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-building text-success fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Multi-Branch Management</h6>
+                      <p class="text-muted small mb-0">Centralized control for institutions with multiple campuses</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item" data-testid="admin-feature-4">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-lightning-charge text-warning fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Quick Actions & Smart Shortcuts</h6>
+                      <p class="text-muted small mb-0">One-click access to frequently used functions and workflows</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <a href="pages/demo.html" class="btn btn-primary" data-testid="button-admin-demo">
+                  <i class="bi bi-eye me-2"></i>View Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
         
         <div class="tab-pane fade" id="teacher" role="tabpanel" data-testid="panel-teacher">
-          <div class="row align-items-center">
+          <div class="row align-items-center g-4">
             <div class="col-lg-7">
-              <img src="https://placehold.co/700x450/00ACC1/FFFFFF?text=Teacher+Portal" alt="Teacher Portal" class="img-fluid rounded shadow" data-testid="img-teacher-portal">
+              <div class="platform-image-wrapper">
+                <img src="images/teacher-portal.jpg" alt="Teacher Portal" class="img-fluid rounded-4 shadow-lg" data-testid="img-teacher-portal">
+              </div>
             </div>
             <div class="col-lg-5">
-              <h3>Streamlined Teacher Portal</h3>
-              <p>Empower educators with tools to manage classes, track student progress, communicate with parents, and create assessments efficiently.</p>
-              <ul>
-                <li>Easy attendance marking</li>
-                <li>Online assignment creation</li>
-                <li>Student progress tracking</li>
-                <li>Parent communication tools</li>
-              </ul>
+              <div class="platform-badge mb-3">
+                <i class="bi bi-person-workspace me-2"></i>
+                <span>For Educators</span>
+              </div>
+              <h3 class="display-6 fw-bold mb-3">Streamlined Teacher Portal</h3>
+              <p class="lead text-muted mb-4">Empower educators with intuitive tools to manage classes, track student progress, communicate with parents, and create engaging assessments efficiently.</p>
+              
+              <div class="feature-list-detailed">
+                <div class="feature-list-item mb-3" data-testid="teacher-feature-1">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-calendar-check text-primary fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Smart Attendance System</h6>
+                      <p class="text-muted small mb-0">Quick mark attendance with QR codes, biometric, or manual entry</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="teacher-feature-2">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-file-earmark-text text-secondary-custom fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Assignment & Assessment Management</h6>
+                      <p class="text-muted small mb-0">Create, distribute, and grade assignments with AI-powered grading assistance</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="teacher-feature-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-bar-chart-line text-success fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Student Progress Analytics</h6>
+                      <p class="text-muted small mb-0">Visual dashboards showing individual and class performance trends</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item" data-testid="teacher-feature-4">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-chat-dots text-info fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Integrated Communication Hub</h6>
+                      <p class="text-muted small mb-0">Send announcements, messages, and alerts to parents and students instantly</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <a href="pages/demo.html" class="btn btn-primary" data-testid="button-teacher-demo">
+                  <i class="bi bi-eye me-2"></i>View Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
         
         <div class="tab-pane fade" id="parent" role="tabpanel" data-testid="panel-parent">
-          <div class="row align-items-center">
+          <div class="row align-items-center g-4">
             <div class="col-lg-7">
-              <img src="https://placehold.co/700x450/0D47A1/FFFFFF?text=Parent+Mobile+App" alt="Parent Mobile App" class="img-fluid rounded shadow" data-testid="img-parent-app">
+              <div class="platform-image-wrapper">
+                <img src="images/parent-app.jpg" alt="Parent Mobile App" class="img-fluid rounded-4 shadow-lg" data-testid="img-parent-app">
+              </div>
             </div>
             <div class="col-lg-5">
-              <h3>Connected Parent App</h3>
-              <p>Keep parents engaged and informed with instant notifications, real-time updates, and easy access to their child's academic journey.</p>
-              <ul>
-                <li>Real-time attendance updates</li>
-                <li>Fee payment gateway</li>
-                <li>Teacher communication</li>
-                <li>Exam results and report cards</li>
-              </ul>
+              <div class="platform-badge mb-3">
+                <i class="bi bi-phone me-2"></i>
+                <span>For Parents</span>
+              </div>
+              <h3 class="display-6 fw-bold mb-3">Connected Parent App</h3>
+              <p class="lead text-muted mb-4">Keep parents engaged and informed with instant push notifications, real-time updates, and easy access to their child's complete academic journey on any device.</p>
+              
+              <div class="feature-list-detailed">
+                <div class="feature-list-item mb-3" data-testid="parent-feature-1">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-bell text-primary fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Real-time Push Notifications</h6>
+                      <p class="text-muted small mb-0">Instant alerts for attendance, grades, announcements, and emergencies</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="parent-feature-2">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-credit-card text-success fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Secure Online Fee Payment</h6>
+                      <p class="text-muted small mb-0">Pay fees via credit card, debit card, or bank transfer with payment history</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="parent-feature-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-clipboard-data text-secondary-custom fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Academic Performance Tracking</h6>
+                      <p class="text-muted small mb-0">View exam results, report cards, and progress reports anytime</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item" data-testid="parent-feature-4">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-chat-text text-info fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Direct Teacher Communication</h6>
+                      <p class="text-muted small mb-0">Chat with teachers, request meetings, and stay involved in learning</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <div class="d-flex gap-3 align-items-center">
+                  <a href="pages/demo.html" class="btn btn-primary" data-testid="button-parent-demo">
+                    <i class="bi bi-eye me-2"></i>View Demo
+                  </a>
+                  <div class="app-badges">
+                    <span class="badge bg-dark me-2" data-testid="badge-ios">
+                      <i class="bi bi-apple me-1"></i>iOS
+                    </span>
+                    <span class="badge bg-dark" data-testid="badge-android">
+                      <i class="bi bi-google-play me-1"></i>Android
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="student" role="tabpanel" data-testid="panel-student">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <div class="platform-image-wrapper">
+                <img src="images/student-portal.jpg" alt="Student Portal" class="img-fluid rounded-4 shadow-lg" data-testid="img-student-portal">
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="platform-badge mb-3">
+                <i class="bi bi-backpack me-2"></i>
+                <span>For Students</span>
+              </div>
+              <h3 class="display-6 fw-bold mb-3">Interactive Student Portal</h3>
+              <p class="lead text-muted mb-4">Empower students with self-service tools to access course materials, submit assignments, view grades, and communicate with teachers from anywhere.</p>
+              
+              <div class="feature-list-detailed">
+                <div class="feature-list-item mb-3" data-testid="student-feature-1">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-book text-primary fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Digital Learning Materials</h6>
+                      <p class="text-muted small mb-0">Access e-books, study materials, and recorded lectures 24/7</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="student-feature-2">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-pencil-square text-secondary-custom fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Assignment Submission Portal</h6>
+                      <p class="text-muted small mb-0">Submit homework, projects, and view feedback from teachers</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item mb-3" data-testid="student-feature-3">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-trophy text-warning fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Performance Dashboard</h6>
+                      <p class="text-muted small mb-0">Track grades, attendance, and overall academic progress</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature-list-item" data-testid="student-feature-4">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-calendar2-week text-info fs-5 me-3 mt-1"></i>
+                    <div>
+                      <h6 class="mb-1">Timetable & Calendar</h6>
+                      <p class="text-muted small mb-0">View class schedules, exam dates, and important events</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <a href="pages/demo.html" class="btn btn-primary" data-testid="button-student-demo">
+                  <i class="bi bi-eye me-2"></i>View Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -291,22 +684,91 @@
   <!-- Testimonials Section -->
   <section class="section bg-light-custom">
     <div class="container">
-      <h2 class="section-title" data-testid="text-testimonials-title">What Our Clients Say</h2>
-      <p class="section-subtitle" data-testid="text-testimonials-subtitle">Trusted by educational leaders across the globe</p>
+      <div class="text-center mb-5">
+        <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3" data-testid="badge-testimonials">Testimonials</span>
+        <h2 class="display-5 fw-bold mb-3" data-testid="text-testimonials-title">What Our Clients Say</h2>
+        <p class="lead text-muted" data-testid="text-testimonials-subtitle">Trusted by educational leaders across the globe. See how we've transformed their institutions</p>
+        
+        <div class="testimonial-stats d-flex justify-content-center gap-5 mt-4 flex-wrap">
+          <div class="stat-badge" data-testid="stat-rating">
+            <div class="d-flex align-items-center gap-2">
+              <div class="stars text-warning fs-5">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <div>
+                <div class="fw-bold fs-4">4.9/5</div>
+                <div class="small text-muted">Average Rating</div>
+              </div>
+            </div>
+          </div>
+          <div class="stat-badge" data-testid="stat-reviews">
+            <div class="fw-bold fs-4 text-primary">2,500+</div>
+            <div class="small text-muted">Happy Clients</div>
+          </div>
+          <div class="stat-badge" data-testid="stat-satisfaction">
+            <div class="fw-bold fs-4 text-success">98%</div>
+            <div class="small text-muted">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
       
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" data-testid="indicator-0"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" data-testid="indicator-1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" data-testid="indicator-2"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" data-testid="indicator-3"></button>
+        </div>
+        
+        <div class="carousel-inner py-5">
           <div class="carousel-item active">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="testimonial-card" data-testid="card-testimonial-1">
-                  <div class="quote-icon">"</div>
-                  <p>Acadify Solution has transformed the way we manage our school. The automation has saved us countless hours, and the parent portal has significantly improved communication. Highly recommended!</p>
-                  <div class="testimonial-author">
-                    <img src="https://placehold.co/60x60/0D47A1/FFFFFF?text=JD" alt="John Davis" data-testid="img-testimonial-author-1">
-                    <div class="author-info">
-                      <h5>John Davis</h5>
-                      <p>Principal, Greenfield International School</p>
+              <div class="col-lg-10">
+                <div class="testimonial-card-modern" data-testid="card-testimonial-1">
+                  <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                      <div class="testimonial-image-wrapper">
+                        <img src="images/testimonial-1.jpg" alt="John Davis" class="rounded-circle" data-testid="img-testimonial-author-1">
+                        <div class="verified-badge" data-testid="badge-verified-1">
+                          <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <h5 class="mb-1 fw-bold">John Davis</h5>
+                        <p class="text-muted small mb-2">Principal</p>
+                        <p class="text-primary small fw-semibold">Greenfield International School</p>
+                        <div class="stars text-warning">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="quote-icon-modern text-primary mb-3">"</div>
+                      <p class="lead mb-4">"Acadify Solution has transformed the way we manage our school. The automation has saved us countless hours, and the parent portal has significantly improved communication."</p>
+                      <div class="testimonial-highlights">
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-clock-history text-success"></i>
+                              <span class="ms-2 small"><strong>40hrs</strong> saved weekly</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-people text-primary"></i>
+                              <span class="ms-2 small"><strong>95%</strong> parent engagement</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -316,15 +778,48 @@
           
           <div class="carousel-item">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="testimonial-card" data-testid="card-testimonial-2">
-                  <div class="quote-icon">"</div>
-                  <p>The implementation was smooth and the support team was exceptional. Our teachers adapted quickly to the system, and we've seen a 50% reduction in administrative workload. It's been a game-changer.</p>
-                  <div class="testimonial-author">
-                    <img src="https://placehold.co/60x60/00ACC1/FFFFFF?text=SM" alt="Sarah Mitchell" data-testid="img-testimonial-author-2">
-                    <div class="author-info">
-                      <h5>Sarah Mitchell</h5>
-                      <p>Director, Sunshine Academy</p>
+              <div class="col-lg-10">
+                <div class="testimonial-card-modern" data-testid="card-testimonial-2">
+                  <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                      <div class="testimonial-image-wrapper">
+                        <img src="images/testimonial-2.jpg" alt="Sarah Mitchell" class="rounded-circle" data-testid="img-testimonial-author-2">
+                        <div class="verified-badge" data-testid="badge-verified-2">
+                          <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <h5 class="mb-1 fw-bold">Sarah Mitchell</h5>
+                        <p class="text-muted small mb-2">Director</p>
+                        <p class="text-secondary-custom small fw-semibold">Sunshine Academy</p>
+                        <div class="stars text-warning">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="quote-icon-modern text-secondary-custom mb-3">"</div>
+                      <p class="lead mb-4">"The implementation was smooth and the support team was exceptional. Our teachers adapted quickly to the system, and we've seen a 50% reduction in administrative workload. It's been a game-changer."</p>
+                      <div class="testimonial-highlights">
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-graph-down text-success"></i>
+                              <span class="ms-2 small"><strong>50%</strong> less admin work</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-speedometer2 text-info"></i>
+                              <span class="ms-2 small"><strong>2 weeks</strong> implementation</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -334,15 +829,99 @@
           
           <div class="carousel-item">
             <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="testimonial-card" data-testid="card-testimonial-3">
-                  <div class="quote-icon">"</div>
-                  <p>As a school administrator, I appreciate the comprehensive reporting features. We can now make data-driven decisions quickly. The mobile app is a huge hit with parents too!</p>
-                  <div class="testimonial-author">
-                    <img src="https://placehold.co/60x60/0D47A1/FFFFFF?text=RK" alt="Rajesh Kumar" data-testid="img-testimonial-author-3">
-                    <div class="author-info">
-                      <h5>Rajesh Kumar</h5>
-                      <p>Administrator, Delhi Public School</p>
+              <div class="col-lg-10">
+                <div class="testimonial-card-modern" data-testid="card-testimonial-3">
+                  <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                      <div class="testimonial-image-wrapper">
+                        <img src="images/testimonial-3.jpg" alt="Rajesh Kumar" class="rounded-circle" data-testid="img-testimonial-author-3">
+                        <div class="verified-badge" data-testid="badge-verified-3">
+                          <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <h5 class="mb-1 fw-bold">Rajesh Kumar</h5>
+                        <p class="text-muted small mb-2">Administrator</p>
+                        <p class="text-primary small fw-semibold">Delhi Public School</p>
+                        <div class="stars text-warning">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="quote-icon-modern text-primary mb-3">"</div>
+                      <p class="lead mb-4">"As a school administrator, I appreciate the comprehensive reporting features. We can now make data-driven decisions quickly. The mobile app is a huge hit with parents too!"</p>
+                      <div class="testimonial-highlights">
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-file-earmark-bar-graph text-primary"></i>
+                              <span class="ms-2 small"><strong>50+</strong> custom reports</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-star text-warning"></i>
+                              <span class="ms-2 small"><strong>4.8/5</strong> parent rating</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="testimonial-card-modern" data-testid="card-testimonial-4">
+                  <div class="row align-items-center">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                      <div class="testimonial-image-wrapper">
+                        <img src="images/testimonial-4.jpg" alt="Maria Peterson" class="rounded-circle" data-testid="img-testimonial-author-4">
+                        <div class="verified-badge" data-testid="badge-verified-4">
+                          <i class="bi bi-patch-check-fill"></i>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <h5 class="mb-1 fw-bold">Maria Peterson</h5>
+                        <p class="text-muted small mb-2">IT Coordinator</p>
+                        <p class="text-secondary-custom small fw-semibold">Oxford College</p>
+                        <div class="stars text-warning">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="quote-icon-modern text-secondary-custom mb-3">"</div>
+                      <p class="lead mb-4">"The security features and cloud infrastructure give us peace of mind. Regular updates keep adding new features, and the API integration capabilities are excellent for our custom needs."</p>
+                      <div class="testimonial-highlights">
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-shield-check text-success"></i>
+                              <span class="ms-2 small"><strong>99.9%</strong> uptime</span>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="highlight-badge">
+                              <i class="bi bi-cloud-check text-info"></i>
+                              <span class="ms-2 small"><strong>Secure</strong> cloud storage</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -352,11 +931,11 @@
         </div>
         
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" data-testid="button-testimonial-prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" data-testid="button-testimonial-next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
