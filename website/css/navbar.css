@@ -1,0 +1,92 @@
+/* Navbar Component Styles */
+.navbar-acadify {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.navbar-brand-acadify {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.navbar-logo {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav .nav-link {
+  color: #374151;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 0.375rem;
+  margin: 0 0.125rem;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.navbar-nav .nav-link.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-demo {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  border: none;
+  color: white;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  color: white;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #1e40af;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0.25rem 0;
+  }
+  
+  .phone-link,
+  .btn-demo {
+    width: 100%;
+    justify-content: center;
+  }
+}
