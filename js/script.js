@@ -245,7 +245,12 @@ function getFooterHTML() {
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://acadifysolution.com/assets/img/logo.png" alt="Acadify Solution" height="30" class="mb-3">
+          <img src="https://acadifysolution.com/assets/img/logo.png" 
+            alt="Acadify Solution" 
+            height="30" 
+            width="120" 
+            class="mb-3"
+            style="object-fit: contain;">
           <p class="mt-3">Empowering Educational Excellence Through Technology. Your trusted partner in modern school management.</p>
           <div class="social-icons mt-3">
             <a href="#" data-testid="link-social-facebook"><i class="bi bi-facebook"></i></a>
@@ -289,7 +294,7 @@ function getFooterHTML() {
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Acadify Solution. All rights reserved. | Empowering Educational Excellence Through Technology</p>
+        <p>&copy; 2025 Acadify Solution. All rights reserved.</p>
       </div>
     </div>
   </footer>

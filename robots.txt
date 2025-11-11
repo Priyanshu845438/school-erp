@@ -1,0 +1,31 @@
+# robots.txt for Acadify Solution - School ERP Software India
+# Domain: school.acadifysolution.com
+
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://school.acadifysolution.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: SemrushBot
+Crawl-delay: 5
+
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Host preference (helps with canonicalization)
+Host: school.acadifysolution.com

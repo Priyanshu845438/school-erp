@@ -1,0 +1,136 @@
+# .htaccess for Acadify Solution School ERP - Advanced SEO Configuration
+# Domain: school.acadifysolution.com
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS (SSL)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force WWW or non-WWW (choose one - this forces non-WWW)
+RewriteCond %{HTTP_HOST} ^www\.school\.acadifysolution\.com [NC]
+RewriteRule ^(.*)$ https://school.acadifysolution.com/$1 [R=301,L]
+
+# Remove trailing slash (optional, for cleaner URLs)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Redirect old URLs if domain changed
+# Uncomment if migrating from old domain
+# RewriteCond %{HTTP_HOST} ^old-domain\.com [NC]
+# RewriteRule ^(.*)$ https://school.acadifysolution.com/$1 [R=301,L]
+
+</IfModule>
+
+# Compression for faster loading
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Browser Caching for Performance
+<IfModule mod_expires.c>
+ExpiresActive On
+
+# Images
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+
+# CSS, JavaScript
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/x-javascript "access plus 1 month"
+
+# HTML (shorter cache for frequently updated content)
+ExpiresByType text/html "access plus 1 hour"
+
+# Fonts
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType application/font-woff "access plus 1 year"
+ExpiresByType application/font-woff2 "access plus 1 year"
+
+# Default
+ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+# XSS Protection
+Header set X-XSS-Protection "1; mode=block"
+
+# Prevent clickjacking
+Header always append X-Frame-Options SAMEORIGIN
+
+# MIME sniffing protection
+Header set X-Content-Type-Options "nosniff"
+
+# Referrer Policy
+Header set Referrer-Policy "no-referrer-when-downgrade"
+
+# Content Security Policy (adjust as needed)
+# Header set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://calendly.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;"
+
+# Cache Control for HTML files (prevent browser caching of HTML)
+<FilesMatch "\.(html|htm)$">
+Header set Cache-Control "no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires 0
+</FilesMatch>
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+Order allow,deny
+Deny from all
+Satisfy All
+</FilesMatch>
+
+# Custom Error Pages (create these files if needed)
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# UTF-8 encoding
+AddDefaultCharset UTF-8
+
+# File type associations for better SEO
+AddType application/javascript .js
+AddType text/css .css
+AddType image/svg+xml .svg .svgz
+AddEncoding gzip .svgz
+
+# Protect wp-config.php if using WordPress (not applicable here)
+# <Files wp-config.php>
+# Order allow,deny
+# Deny from all
+# </Files>
+
+# Block access to hidden files
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# ETag removal for better caching
+<IfModule mod_headers.c>
+Header unset ETag
+</IfModule>
+FileETag None
+
+# Prevent hotlinking of images (optional)
+# <IfModule mod_rewrite.c>
+# RewriteCond %{HTTP_REFERER} !^$
+# RewriteCond %{HTTP_REFERER} !^https?://(www\.)?school\.acadifysolution\.com [NC]
+# RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F,NC,L]
+# </IfModule>
