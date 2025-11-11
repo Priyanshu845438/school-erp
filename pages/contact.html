@@ -38,9 +38,6 @@
             <a class="nav-link" href="pricing.html" data-testid="link-nav-pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html" data-testid="link-nav-about">About</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" href="contact.html" data-testid="link-nav-contact">Contact</a>
           </li>
           <li class="nav-item">
@@ -104,83 +101,19 @@
   <section class="section">
     <div class="container">
       <div class="row g-5">
-        <!-- Contact Form -->
+        <!-- Calendly Booking Widget -->
         <div class="col-lg-7">
           <div class="contact-form-wrapper">
             <div class="text-center mb-4">
-              <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">Send Message</span>
-              <h2 class="fw-bold" data-testid="text-form-title">Drop Us a Line</h2>
-              <p class="text-muted">Fill out the form below and we'll get back to you within 24 hours</p>
+              <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">Book a Meeting</span>
+              <h2 class="fw-bold" data-testid="text-form-title">Schedule a Call</h2>
+              <p class="text-muted">Choose a convenient time to discuss your requirements</p>
             </div>
             
-            <form class="modern-contact-form" novalidate data-testid="form-contact">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="name" class="form-label" data-testid="label-name">Full Name *</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-person"></i>
-                    <input type="text" class="form-control" id="name" name="name" required data-testid="input-name" placeholder="John Doe">
-                  </div>
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="email" class="form-label" data-testid="label-email">Email Address *</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-envelope"></i>
-                    <input type="email" class="form-control" id="email" name="email" required data-testid="input-email" placeholder="john@school.edu">
-                  </div>
-                  <div class="invalid-feedback">Please enter a valid email.</div>
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="phone" class="form-label" data-testid="label-phone">Phone Number</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-telephone"></i>
-                    <input type="tel" class="form-control" id="phone" name="phone" data-testid="input-phone" placeholder="+1 (555) 123-4567">
-                  </div>
-                </div>
-                
-                <div class="col-md-6">
-                  <label for="school" class="form-label" data-testid="label-school">School Name</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-building"></i>
-                    <input type="text" class="form-control" id="school" name="school" data-testid="input-school" placeholder="Your School Name">
-                  </div>
-                </div>
-                
-                <div class="col-12">
-                  <label for="subject" class="form-label" data-testid="label-subject">Subject *</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-tag"></i>
-                    <select class="form-control" id="subject" name="subject" required data-testid="select-subject">
-                      <option value="">-- Select a Subject --</option>
-                      <option value="sales">Sales Inquiry</option>
-                      <option value="support">Technical Support</option>
-                      <option value="demo">Request a Demo</option>
-                      <option value="partnership">Partnership Opportunity</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div class="invalid-feedback">Please select a subject.</div>
-                </div>
-                
-                <div class="col-12">
-                  <label for="message" class="form-label" data-testid="label-message">Message *</label>
-                  <div class="input-group-modern">
-                    <i class="bi bi-chat-text" style="align-self: flex-start; margin-top: 1rem;"></i>
-                    <textarea class="form-control" id="message" name="message" rows="5" required data-testid="textarea-message" placeholder="Tell us about your requirements..."></textarea>
-                  </div>
-                  <div class="invalid-feedback">Please enter your message.</div>
-                </div>
-                
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary btn-lg w-100" data-testid="button-submit">
-                    <i class="bi bi-send me-2"></i>Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/acadify-online/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
           </div>
         </div>
 

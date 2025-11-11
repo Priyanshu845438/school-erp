@@ -47,9 +47,35 @@ class TestimonialSlider {
 
 // Initialize testimonial slider on pages that have it
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize shared footer
+  initFooter();
+  
   // Initialize testimonial slider if it exists
   if (document.querySelector('.testimonial-slider')) {
     new TestimonialSlider('.testimonial-slider');
+  }
+  
+  // Module Category Filter
+  const categoryButtons = document.querySelectorAll('.module-category-tabs button');
+  if (categoryButtons.length > 0) {
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent Bootstrap tab behavior
+        
+        // Get category from button id (e.g., 'all-tab' -> 'all')
+        const category = this.id.replace('-tab', '');
+        
+        // Update active state
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Filter modules
+        filterModulesByCategory(category);
+      });
+    });
+    
+    // Set initial state to 'all'
+    filterModulesByCategory('all');
   }
   
   // Pricing toggle (Monthly/Annually)
@@ -142,6 +168,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Module category filter functionality
+function filterModulesByCategory(category) {
+  const moduleCards = document.querySelectorAll('.module-card-advanced');
+  
+  moduleCards.forEach(card => {
+    const cardCategory = card.getAttribute('data-category');
+    const columnElement = card.closest('.col-lg-4, .col-md-6');
+    
+    if (category === 'all' || cardCategory === category) {
+      if (columnElement) {
+        columnElement.style.display = 'block';
+      }
+    } else {
+      if (columnElement) {
+        columnElement.style.display = 'none';
+      }
+    }
+  });
+  
+  // Show/hide section headers based on filtered results
+  const sectionHeaders = document.querySelectorAll('#modules-grid .col-12 h4');
+  sectionHeaders.forEach(header => {
+    const headerRow = header.closest('.col-12');
+    if (headerRow) {
+      if (category === 'all') {
+        headerRow.style.display = 'block';
+      } else {
+        headerRow.style.display = 'none';
+      }
+    }
+  });
+}
+
 // Module search/filter functionality
 function filterModules(searchTerm) {
   const moduleCards = document.querySelectorAll('.module-card');
@@ -178,3 +237,72 @@ const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-tog
 popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl);
 });
+
+// Shared Footer Template
+function getFooterHTML() {
+  return `
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5><i class="bi bi-mortarboard-fill"></i> Acadify Solution</h5>
+          <p class="mt-3">Empowering Educational Excellence Through Technology. Your trusted partner in modern school management.</p>
+          <div class="social-icons mt-3">
+            <a href="#" data-testid="link-social-facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" data-testid="link-social-twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" data-testid="link-social-linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="#" data-testid="link-social-instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Product</h5>
+          <ul>
+            <li><a href="/pages/modules.html" data-testid="link-footer-modules">All Modules</a></li>
+            <li><a href="/pages/pricing.html" data-testid="link-footer-pricing">Pricing</a></li>
+            <li><a href="/pages/demo.html" data-testid="link-footer-demo">Request Demo</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="/pages/contact.html" data-testid="link-footer-contact">Contact</a></li>
+            <li><a href="#" data-testid="link-footer-blog">Blog</a></li>
+            <li><a href="/pages/case-studies.html" data-testid="link-footer-case-studies">Case Studies</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="/pages/faq.html" data-testid="link-footer-faq">FAQ</a></li>
+            <li><a href="#" data-testid="link-footer-help">Help Center</a></li>
+            <li><a href="#" data-testid="link-footer-support">Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#" data-testid="link-footer-privacy">Privacy Policy</a></li>
+            <li><a href="#" data-testid="link-footer-terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Acadify Solution. All rights reserved. | Empowering Educational Excellence Through Technology</p>
+      </div>
+    </div>
+  </footer>
+  `;
+}
+
+// Initialize shared footer
+function initFooter() {
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (footerPlaceholder) {
+    footerPlaceholder.outerHTML = getFooterHTML();
+  }
+}
