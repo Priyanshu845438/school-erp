@@ -245,7 +245,7 @@ function getFooterHTML() {
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5><i class="bi bi-mortarboard-fill"></i> Acadify Solution</h5>
+          <img src="https://acadifysolution.com/assets/img/logo.png" alt="Acadify Solution" height="30" class="mb-3">
           <p class="mt-3">Empowering Educational Excellence Through Technology. Your trusted partner in modern school management.</p>
           <div class="social-icons mt-3">
             <a href="#" data-testid="link-social-facebook"><i class="bi bi-facebook"></i></a>
@@ -260,7 +260,7 @@ function getFooterHTML() {
           <ul>
             <li><a href="/pages/modules.html" data-testid="link-footer-modules">All Modules</a></li>
             <li><a href="/pages/pricing.html" data-testid="link-footer-pricing">Pricing</a></li>
-            <li><a href="/pages/demo.html" data-testid="link-footer-demo">Request Demo</a></li>
+            <li><a href="https://calendly.com/acadify-online/30min" target="_blank" data-testid="link-footer-demo">Request Demo</a></li>
           </ul>
         </div>
         
@@ -268,7 +268,6 @@ function getFooterHTML() {
           <h5>Company</h5>
           <ul>
             <li><a href="/pages/contact.html" data-testid="link-footer-contact">Contact</a></li>
-            <li><a href="#" data-testid="link-footer-blog">Blog</a></li>
             <li><a href="/pages/case-studies.html" data-testid="link-footer-case-studies">Case Studies</a></li>
           </ul>
         </div>
@@ -277,16 +276,14 @@ function getFooterHTML() {
           <h5>Support</h5>
           <ul>
             <li><a href="/pages/faq.html" data-testid="link-footer-faq">FAQ</a></li>
-            <li><a href="#" data-testid="link-footer-help">Help Center</a></li>
-            <li><a href="#" data-testid="link-footer-support">Support</a></li>
           </ul>
         </div>
         
         <div class="col-lg-2 col-md-6">
           <h5>Legal</h5>
           <ul>
-            <li><a href="#" data-testid="link-footer-privacy">Privacy Policy</a></li>
-            <li><a href="#" data-testid="link-footer-terms">Terms of Service</a></li>
+            <li><a href="/pages/privacy.html" data-testid="link-footer-privacy">Privacy Policy</a></li>
+            <li><a href="/pages/terms.html" data-testid="link-footer-terms">Terms of Service</a></li>
           </ul>
         </div>
       </div>
